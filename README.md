@@ -1,2 +1,2 @@
 # sahaja-app
-Repository to host Sahaja Mobil App project
+Repository to host Sahaja Mobile App project
