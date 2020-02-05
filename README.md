@@ -75,13 +75,13 @@ c:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk\platform-tools
 
 ## Running the application
 
-Assuming that you have Node 10 LTS or greater installed, you can use npm to install the Expo CLI command line utility:
+1. Assuming that you have Node 10 LTS or greater installed, you can use npm to install the Expo CLI command line utility:
 
 ```
 npm install -g expo-cli
 ```
 
-Then run the following commands to create a new React Native project called "AwesomeProject":
+2. Then run the following commands to create a new React Native project called "AwesomeProject":
 
 ```
 cd sahaja-app
@@ -89,3 +89,6 @@ npm start # you can also use: expo start
 ```
 
 This will start a development server for you.
+
+3. A browser page opens with option to run Android emulator on left side bar. On clicking this option, the emulator will open the app.
+
