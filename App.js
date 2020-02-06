@@ -8,7 +8,24 @@ export default function App() {
     </View>
   );
 }
+export default class app extends React.Component
+  {
+render() {
+  return 
+      { 
+        <View style = {style.container} >
+          <Image 
+           source = {require('./assets/Background.png')}
+           />
+        </View>
+ 
 
+
+
+
+      };
+    }
+  }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
