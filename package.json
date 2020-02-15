@@ -5,7 +5,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "images": "node scripts/images.js",
+    "fonts": "node scripts/fonts.js"
   },
   "dependencies": {
     "expo": "^35.0.0",
