@@ -19,7 +19,7 @@ choco install -y nodejs.install python2 jdk8
 ```
 
 If you have already installed Node on your system, make sure it is Node 8.3 or newer. If you already have a JDK on your system, make sure it is version 8 or newer.
-
+2
 ### 2) Android development environment
 
 1. Install Android Studio [https://developer.android.com/studio/index.html]
@@ -92,3 +92,39 @@ This will start a development server for you.
 
 3. A browser page opens with option to run Android emulator on left side bar. On clicking this option, the emulator will open the app.
 
+
+
+## Project structure
+We follow the structure suggested here: https://www.freecodecamp.org/news/how-to-structure-your-project-and-manage-static-resources-in-react-native-6f4cfc947d92/
+
+- Code should be placed in `/src`
+- Screen codes should be in `/src/screens`
+- To import libraries placed under `/src/library`, instead of using relative path, import like below:
+```
+import ImageButton from 'library/components/ImageButton'
+import moveToBottom from 'library/utils/moveToBottom'
+```
+- Resources should be placed under `/src/res`. To import resources, instead of using relative path, import like below:
+```
+import R from 'res/R'
+
+render() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Image
+        style={styles.logo}
+        source={R.images.logo} />
+      <Image
+        style={styles.image}
+        source={R.images.placeholder} />
+      <Text style={styles.title}>{R.strings.onboarding.welcome.title.toUpperCase()}</Text>
+  )
+}
+```
+
+Colors, strings, fonts, images and uris are defined under `/src/res`
+
+- Add images to res/images
+After adding, remember to run `npm run images`
+- Add custom fonts to res/fonts
+After adding, run `npm run fonts`
