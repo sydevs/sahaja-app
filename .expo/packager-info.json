@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19003,
+  "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19004,
-  "packagerPid": 6682,
-  "expoServerNgrokUrl": "https://bn-vi8.abhijeetnaikare.sahaja-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.bn-vi8.abhijeetnaikare.sahaja-app.exp.direct",
-  "ngrokPid": 6701
+  "packagerPort": 19001,
+  "packagerPid": 75317,
+  "expoServerNgrokUrl": "https://g9-in2.anonymous.sahaja-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.g9-in2.anonymous.sahaja-app.exp.direct",
+  "ngrokPid": 75342
 }
