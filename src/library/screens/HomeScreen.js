@@ -1,12 +1,18 @@
 import React,{ Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image,
+  Button,
+  SafeAreaView,
+  Text,
+  Alert,} 
+  from 'react-native';
 import { Video } from 'expo-av';
 import R from 'res/R';
+import MeditationChoose from './MeditationChoose';
 
-export default class App extends Component {
+export default class HOmeScreen extends Component {
 render() {
   return (
-        <View style = {styles.container} >
+        <SafeAreaView style = {styles.container} >
           {/* <Image source = {R.images.Background}
            /> */}
            <Video
@@ -19,7 +25,17 @@ render() {
               isLooping
               style={{ width: 300, height: 300 }}
             />
-        </View>
+            <Button
+                title= "Go to the meditation"
+                onPress={() => props.navigation.navigate({routeName: MeditationChoose})
+                }
+            />
+               <Button
+                title= "Go to the music"
+                onPress={() => props.navigation.navigate({routeName: MusicChoose})
+              }
+            />
+        </SafeAreaView>
        );
     }
   }
