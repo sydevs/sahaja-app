@@ -4,7 +4,7 @@ import HomeScreen from '../screens/HomeScreen';
 import Meditation from '../screens/Meditation';
 import Music from '../screens/Music';
 import MusicChoose from '../screens/MusicChoose';
-import MeditationChoose from ".../screens/MeditationChoose"
+import MeditationChoose from "../screens/MeditationChoose"
 
 
 const AppNavigator = createStackNavigator({

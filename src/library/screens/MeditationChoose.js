@@ -1,11 +1,5 @@
 import React,{ Component } from 'react';
-import { StyleSheet, Text, View, Image,
-  Button,
-  SafeAreaView,
-  Text,
-  Alert,} 
-  from 'react-native';
-import MeditationChoose from './MeditationChoose';
+import { StyleSheet, Text, View, Image,Button,SafeAreaView,Alert} from 'react-native';
 import Meditation from './Meditation';
 
 export default class MeditationChoose extends Component {

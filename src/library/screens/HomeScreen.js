@@ -1,15 +1,11 @@
 import React,{ Component } from 'react';
-import { StyleSheet, Text, View, Image,
-  Button,
-  SafeAreaView,
-  Text,
-  Alert,} 
-  from 'react-native';
+import { StyleSheet, Text, View, Image,Button,SafeAreaView,Alert} from 'react-native';
 import { Video } from 'expo-av';
 import R from 'res/R';
 import MeditationChoose from './MeditationChoose';
+import MusicChoose from './MusicChoose';
 
-export default class HOmeScreen extends Component {
+export default class HomeScreen extends Component {
 render() {
   return (
         <SafeAreaView style = {styles.container} >
