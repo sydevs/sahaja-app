@@ -10,11 +10,14 @@
     "fonts": "node scripts/fonts.js"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.0.6",
     "expo": "^35.0.0",
+    "expo-asset": "^7.0.0",
     "expo-av": "~7.0.1",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-slider": "^0.11.0",
     "react-native-web": "^0.11.7"
   },
   "devDependencies": {
