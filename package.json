@@ -10,10 +10,12 @@
     "fonts": "node scripts/fonts.js"
   },
   "dependencies": {
+    "@babel/runtime": "^7.8.7",
     "@expo/vector-icons": "^10.0.6",
     "@react-native-community/masked-view": "0.1.6",
     "expo": "^35.0.0",
     "expo-asset": "^7.0.0",
+    "expo-audioplayer": "^1.0.0",
     "expo-av": "~7.0.1",
     "expo-font": "~7.0.0",
     "react": "16.8.3",

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Player from './Player';
+// import Player from './Player';
+import Player from 'expo-audioplayer';
 import { BackHandler } from 'react-native';
 // import i18n from '../../Assets/I18n/i18n';
 // import { Actions } from 'react-native-router-flux';
