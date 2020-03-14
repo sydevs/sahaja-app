@@ -10,10 +10,12 @@
     "fonts": "node scripts/fonts.js"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.0.6",
     "@react-native-community/masked-view": "0.1.6",
     "expo": "^35.0.0",
+    "expo-asset": "^7.0.0",
     "expo-av": "~7.0.1",
-    "expo-font": "8.0.0",
+    "expo-font": "~7.0.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
@@ -21,6 +23,7 @@
     "react-native-reanimated": "~1.2.0",
     "react-native-safe-area-context": "~0.3.6",
     "react-native-screens": "~1.0.0-alpha.23",
+    "react-native-slider": "^0.11.0",
     "react-native-web": "^0.11.7",
     "react-navigation": "4.1.1",
     "react-navigation-drawer": "2.3.4",
