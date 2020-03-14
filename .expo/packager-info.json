@@ -2,8 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 75317,
-  "expoServerNgrokUrl": "https://g9-in2.anonymous.sahaja-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.g9-in2.anonymous.sahaja-app.exp.direct",
-  "ngrokPid": 75342
+  "packagerPid": 52327,
+  "expoServerNgrokUrl": "https://2a-tsd.anonymous.sahaja-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.2a-tsd.anonymous.sahaja-app.exp.direct",
+  "ngrokPid": 52347,
+  "webpackServerPort": null
 }

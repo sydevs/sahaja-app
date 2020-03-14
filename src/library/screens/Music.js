@@ -1,12 +1,14 @@
 import React from 'react';
 import {View , Text, StyleSheet} from 'react-native'
+import { Video } from 'expo-av';
+import R from '../../res/R'
 
 const Music  = props => {
     return (
-         <View style={styles.screen}>
-        <Text> The Music Screen </Text>
-        </View>
-    );
+        <View style={styles.screen}>
+           <Text>Music Screen - Add Music Component here</Text>
+       </View>
+   );
 };
 
 
