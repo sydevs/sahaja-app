@@ -12,16 +12,16 @@ export default class MusicPlayer extends Component {
   render() {
     const TRACKS = [
       {
-        title: 'Stressed Out',
-        subtitle: 'Twenty One Pilots',
-        albumArtUrl: "https://cdn-images-1.medium.com/max/1344/1*fF0VVD5cCRam10rYvDeTOw.jpeg",
-        audioUrl: "https://ia800204.us.archive.org/11/items/hamlet_0911_librivox/hamlet_act1_shakespeare.mp3"
+        title: 'Raag Yaman',
+        subtitle: 'By Leo Vertunni',
+        albumArtUrl: "https://assets.wemeditate.co/uploads/artist/image/1/28da8663c3.jpg",
+        audioUrl: "https://assets.wemeditate.co/uploads/track/7/Surbahar__raag_Yaman_-_Leo_Vertunni.mp3"
       },
       {
-        title: 'Stressed Out',
-        subtitle: 'Twenty One Pilots',
-        albumArtUrl: "https://cdn-images-1.medium.com/max/1344/1*fF0VVD5cCRam10rYvDeTOw.jpeg",
-        audioUrl: "https://ia600204.us.archive.org/11/items/hamlet_0911_librivox/hamlet_act5_shakespeare.mp3"
+        title: 'Setar Dashti',
+        subtitle: 'By Nirmal Nair',
+        albumArtUrl: "https://assets.wemeditate.co/uploads/artist/image/2/Nirmal_Nair_B_W.jpg",
+        audioUrl: "https://assets.wemeditate.co/uploads/track/12/Setar_Dashti_.mp3"
       }
     ];
     return <Player tracks={TRACKS} />
