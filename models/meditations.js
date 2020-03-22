@@ -1,9 +1,8 @@
 class Meditation{
-    constructor(id,title,imageUrl,videoUrl){
+    constructor(id,title,meditationCategories){
         this.id = id;
         this.title = title;
-        this.imageUrl = imageUrl;
-        this.videoUrl = videoUrl;
+        this.meditationCategories = meditationCategories;
     }
 }
 

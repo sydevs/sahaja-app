@@ -1,46 +1,42 @@
 import React from 'react';
 import {View , Text, StyleSheet, Button, TouchableOpacity} from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
-import { MEDITATIONS } from '../../../data/meditationData'
 import colors from '../../res/colors'
 
 
 
-const Meditation  = props => {
+const ChooseDuration  = props => {
+    const meditationCategories = props.navigation.getParam('meditationCategories');
     const renderGridItems = (itemData) => {
         return (<TouchableOpacity onPress={() => {
                     props.navigation.navigate({
-                            routeName:  'ChooseDuration',
+                            routeName:  'VideoPlayer',
                             params: {
                                 id: itemData.item.id,
-                                title: itemData.item.title,
-                                meditationCategories: itemData.item.meditationCategories
+                                imageUrl: itemData.item.imageUrl,
+                                videoUrl: itemData.item.videoUrl
                             }
                         })
                     }}>
                     <View style={styles.gridItems}>
-                        <Text>{itemData.item.title}</Text>
+                        <Text>{itemData.item.id}</Text>
                    </View>
                 </TouchableOpacity>
             );
     };
     return (
          <View style={styles.screen}>
-             <Text>Choose Meditation</Text>
-             <FlatList keyExtractor={(item,index) => item.id} data={ MEDITATIONS } renderItem= {renderGridItems} numColumns={1}/>
-             {/* <Button title="Feel Satisfied" onPress={() => {
-                 props.navigation.navigate({
-                    routeName: 'VideoPlayer'       
-                 });
-             }}/> */}
+             <Text>Choose Duration</Text>
+             <FlatList keyExtractor={(item,index) => item.id} data={ meditationCategories } renderItem= {renderGridItems} numColumns={1}/>
+             
 
             
         </View>
     );
 };
 
-Meditation.navigationOptions = {
-    headerTitle: 'Meditate Now',
+ChooseDuration.navigationOptions = {
+    headerTitle: 'Choose Duration',
     headerStyle: {
         backgroundColor: colors.title
     } ,
@@ -61,4 +57,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Meditation; 
+export default ChooseDuration; 
