@@ -4,12 +4,14 @@ import HomeScreen from '../screens/HomeScreen';
 import Meditation from '../screens/Meditation';
 import Music from '../screens/Music';
 import SelfRealization from '../screens/SelfRealization'
+import VideoPlayer from '../components/VideoPlayer/VideoPlayer'
 
 const AppNavigator = createStackNavigator({
   Home: HomeScreen,
   Meditation: Meditation,
   Music: Music,
-  SelfRealization: SelfRealization
+  SelfRealization: SelfRealization,
+  VideoPlayer: VideoPlayer
 });
 
 

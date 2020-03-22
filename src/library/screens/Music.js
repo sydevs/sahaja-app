@@ -8,17 +8,7 @@ const Music  = props => {
     return (
         <View style={styles.screen}>
            {/* <Text>Music Screen - Add Music Component here</Text> */}
-            {/* <Video
-              source={{ uri: R.uris.bigBuckBunny }}
-              rate={1.0}
-              volume={1.0}
-              isMuted={false}
-              resizeMode="cover"
-              shouldPlay
-              isLooping
-              style={{ width: 300, height: 300 }}
-        useNativeControls={true}
-            /> */}
+            
             <MusicPlayer />
        </View>
    );
