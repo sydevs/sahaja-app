@@ -24,6 +24,6 @@ export default class MusicPlayer extends Component {
         audioUrl: "https://assets.wemeditate.co/uploads/track/12/Setar_Dashti_.mp3"
       }
     ];
-    return <Player tracks={TRACKS} />
+    return <Player tracks={TRACKS} displayBackForward={false}/>
   }
 }
