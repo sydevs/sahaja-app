@@ -6,6 +6,7 @@ import Music from '../screens/Music';
 import SelfRealization from '../screens/SelfRealization'
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer'
 import ChooseDuration from '../screens/ChooseDuration'
+import colors from '../../res/colors'
 
 const AppNavigator = createStackNavigator({
   Home: HomeScreen,
@@ -14,6 +15,13 @@ const AppNavigator = createStackNavigator({
   SelfRealization: SelfRealization,
   VideoPlayer: VideoPlayer,
   ChooseDuration: ChooseDuration
+},{
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: colors.title
+  } ,
+  headerTintColor: 'white'
+  }
 });
 
 

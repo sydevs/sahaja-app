@@ -8,7 +8,7 @@ const HomeScreen = props => {
     <ImageBackground resizeMode='cover' style={styles.backgroundImage} source={R.images.Background}>
           <View style = {styles.screen} >
             
-            <Button title="Meditation" onPress={() => {
+            <Button title="Setup your own Meditation" onPress={() => {
               props.navigation.navigate({routeName: 'Meditation'});
             }}/>
 
@@ -36,6 +36,10 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     flex: 1
+  },
+  title: {
+    fontFamily: 'open-sans-bold',
+    fontSize: 22
   }
 });
 

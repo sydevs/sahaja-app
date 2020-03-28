@@ -3,11 +3,11 @@ import {View , Text, StyleSheet, Button} from 'react-native'
 import { Video } from 'expo-av';
 
 const VideoPlayer  = props => {
-    const title = props.navigation.getParam('title');
+    const id = props.navigation.getParam('id');
     const videoUrl = props.navigation.getParam('videoUrl');
     return (
          <View style={styles.screen}>
-            <Text>Video Player Screen - {title}</Text>
+            <Text>Video Player Screen - {id}</Text>
             <Video
                 source={{ uri: videoUrl }}
                 rate={1.0}
