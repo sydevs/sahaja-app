@@ -7,20 +7,23 @@ import SelfRealization from '../screens/SelfRealization'
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer'
 import ChooseDuration from '../screens/ChooseDuration'
 import colors from '../../res/colors'
+import LoadingScreen from '../screens/LoadingScreen'
+import FirstExperience from '../screens/FirstExperience'
+import YourFirstMeditation from '../screens/YourFirstMeditation'
 
 const AppNavigator = createStackNavigator({
+  LoadingScreen: LoadingScreen,
   Home: HomeScreen,
   Meditation: Meditation,
   Music: Music,
   SelfRealization: SelfRealization,
   VideoPlayer: VideoPlayer,
-  ChooseDuration: ChooseDuration
+  ChooseDuration: ChooseDuration,
+  FirstExperience: FirstExperience,
+  YourFirstMeditation: YourFirstMeditation
 },{
   defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: colors.title
-  } ,
-  headerTintColor: 'white'
+    headerShown: false
   }
 });
 

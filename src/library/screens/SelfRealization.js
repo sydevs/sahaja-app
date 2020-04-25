@@ -1,20 +1,20 @@
 import React from 'react';
-import {View , Text, StyleSheet} from 'react-native'
+import {View , StyleSheet, Dimensions} from 'react-native'
 import { Video } from 'expo-av';
-import R from '../../res/R'
 
+const { width, height } = Dimensions.get('window')
 const SelfRealization  = props => {
     return (
          <View style={styles.screen}>
             <Video
-                source={{ uri: 'https://player.vimeo.com/external/363241676.hd.mp4?s=d7549d7f7476a056a027920477542db4bd4acfa4&amp;profile_id=174&amp;oauth2_token_id=1254753263' }}
+                source={{ uri: 'https://player.vimeo.com/external/363242273.sd.mp4?s=945156121c0de1cdd461c63fd9bfdbcf0ce68ec5&amp;profile_id=165&amp;oauth2_token_id=1254753263' }}
                 rate={1.0}
                 volume={1.0}
                 isMuted={false}
-                resizeMode="stretch"
+                resizeMode="cover"
                 shouldPlay
-                isLooping
-                style={{ width: 300, height: 300 }}
+                useNativeControls
+                style={styles.video}
                 />
         </View>
     );
@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    video: {
+        width: width,
+        height: height 
     }
 });
 
