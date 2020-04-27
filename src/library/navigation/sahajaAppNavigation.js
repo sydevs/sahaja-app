@@ -12,8 +12,8 @@ import FirstExperience from '../screens/FirstExperience'
 import YourFirstMeditation from '../screens/YourFirstMeditation'
 
 const AppNavigator = createStackNavigator({
-  LoadingScreen: LoadingScreen,
   Home: HomeScreen,
+  LoadingScreen: LoadingScreen,
   Meditation: Meditation,
   Music: Music,
   SelfRealization: SelfRealization,

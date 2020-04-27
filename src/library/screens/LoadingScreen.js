@@ -1,7 +1,6 @@
 import React,{ Component, useEffect, useState } from 'react';
 import {StyleSheet,View,Text,AsyncStorage} from 'react-native';
 import checkIfFirstLaunched from '../components/CheckIfFirstLaunch'
-import AppNavigator from '../navigation/sahajaAppNavigation'
 const HAS_LAUNCHED = 'hasLaunched';
 
 const LoadingScreen = props => {
