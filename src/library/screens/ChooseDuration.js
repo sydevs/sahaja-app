@@ -13,7 +13,6 @@ const ChooseDuration  = props => {
                             routeName:  'VideoPlayer',
                             params: {
                                 id: itemData.item.id,
-                                imageUrl: itemData.item.imageUrl,
                                 videoUrl: itemData.item.videoUrl
                             }
                         })

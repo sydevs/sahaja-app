@@ -2,11 +2,13 @@ import React from 'react';
 import {View , Text, StyleSheet, Button, TouchableOpacity} from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
 import { MEDITATIONS } from '../../../data/meditationData'
-
-
-
+import { SvgXml } from "react-native-svg";
+import CalmImage from '../../res/svgs/CalmImage'
 
 const Meditation  = props => {
+
+    
+
     const renderGridItems = (itemData) => {
         return (<TouchableOpacity onPress={() => {
                     props.navigation.navigate({
@@ -19,17 +21,27 @@ const Meditation  = props => {
                         })
                     }}>
                     <View style={styles.gridItems}>
-                        <View style={styles.container}>
-                            <Text style={styles.title} numberOfLines={2}>{itemData.item.title}</Text>
-                        </View>
+                        <Text style={styles.meditationTypeText} numberOfLines={2}>{itemData.item.title}</Text>
+                        <SvgXml xml={itemData.item.imageData} width="51" height="33"/>
                    </View>
                 </TouchableOpacity>
             );
     };
     return (
          <View style={styles.screen}>
-             <Text style={styles.title}>I wish to feel ...</Text>
-             <FlatList keyExtractor={(item,index) => item.id} data={ MEDITATIONS } renderItem= {renderGridItems} numColumns={1}/>
+             <View style={{ height: 90}} />
+             <View style={{height: 40,alignItems:'center'}} >
+                <Text style={styles.titleText}>
+                    How do you 
+                </Text>
+            </View>
+            <View style={{height: 40,alignItems:'center'}} >
+                <Text style={styles.titleText}>
+                    wish to feel ?
+                </Text>
+            </View>
+            <View style={{ height: 50}} />
+             <FlatList keyExtractor={(item,index) => item.id} data={ MEDITATIONS } renderItem= {renderGridItems} numColumns={2}/>
         </View>
     );
 };
@@ -43,14 +55,11 @@ const styles = StyleSheet.create({
     screen : {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        flexDirection: 'column'
     },
     gridItems: {
-        flex: 1,
-        margin: 15,
-        height: 100,
-        borderRadius:10,
-        overflow: 'hidden'
+        flex: 1
     },
     container: {
         flex: 1,
@@ -65,11 +74,27 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
         backgroundColor: '#E0E0E0'
     },
-    title: {
-        fontFamily: 'open-sans-bold',
-        fontSize: 22,
-        textAlign: 'right'
-    }
+    titleText: {
+        width: 345,
+        height: 40,
+        fontFamily: 'raleway-regular',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 30,
+        lineHeight: 40,
+        textAlign: "center",
+        letterSpacing: 0.8,
+        color: '#7B7B7B'
+    },
+    meditationTypeText: {
+        height: 20,
+        fontFamily: 'raleway-regular',
+        fontStyle: "normal",
+        fontWeight: 'normal',
+        fontSize: 17,
+        lineHeight: 20,
+        color: "#555555"
+      }
 });
 
 export default Meditation; 

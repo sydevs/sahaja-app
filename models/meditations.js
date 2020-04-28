@@ -1,7 +1,8 @@
 class Meditation{
-    constructor(id,title,meditationCategories){
+    constructor(id,title,imageData,meditationCategories){
         this.id = id;
         this.title = title;
+        this.imageData = imageData;
         this.meditationCategories = meditationCategories;
     }
 }

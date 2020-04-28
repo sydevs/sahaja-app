@@ -1,7 +1,6 @@
 class MeditationCategory{
-    constructor(id,imageUrl,videoUrl){
+    constructor(id,imageData,videoUrl){
         this.id = id;
-        this.imageUrl = imageUrl;
         this.videoUrl = videoUrl;
     }
 }
