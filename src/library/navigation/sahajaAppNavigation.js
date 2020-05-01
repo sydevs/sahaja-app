@@ -51,7 +51,7 @@ const bottomTabNavigator = createBottomTabNavigator({
       tabBarIcon: (tabInfo) => {
         return <MeditateIcon/>
       },
-      tabBarVisible: false
+      tabBarVisible: true
     }
   },
   Music: {

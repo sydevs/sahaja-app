@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React,{useState} from 'react';
 import {View , Text, StyleSheet, Button,Dimensions} from 'react-native'
 import { Video } from 'expo-av';
 
@@ -6,6 +6,7 @@ const { width, height } = Dimensions.get('window')
 const VideoPlayer  = props => {
     const id = props.navigation.getParam('id');
     const videoUrl = props.navigation.getParam('videoUrl');
+    const [isMute,setMute] = useState(false)
     const _onPlaybackStatusUpdate = (playbackStatus) => {
         if (playbackStatus.didJustFinish){
           // The player has just finished playing and will stop.
@@ -14,15 +15,24 @@ const VideoPlayer  = props => {
         }
     };
 
+    const didBlurSubscription = props.navigation.addListener(
+        'didBlur',
+        payload => {
+          console.debug('didBlur', payload);
+          setMute(true)
+        }
+      );
+
 
     return (
          <View style={styles.screen}>
                 <Video
                 ref={this._handleVideoRef}
+                onPlaybackStatusUpdate={(playbackStatus) => _onPlaybackStatusUpdate(playbackStatus)}
                 source={{ uri: videoUrl }}
                 rate={1.0}
                 volume={1.0}
-                isMuted={false}
+                isMuted={isMute}
                 resizeMode="cover"
                 shouldPlay
                 useNativeControls

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {View , StyleSheet, Dimensions} from 'react-native'
 import { Video } from 'expo-av';
 
@@ -12,6 +12,15 @@ const SelfRealization  = props => {
           props.navigation.navigate({ routeName:  'Home'}) 
         }
     };
+    const [isMute,setMute] = useState(false)
+
+    const didBlurSubscription = props.navigation.addListener(
+        'didBlur',
+        payload => {
+          console.debug('didBlur', payload);
+          setMute(true)
+        }
+      );
 
     return (
          <View style={styles.screen}>
@@ -22,7 +31,7 @@ const SelfRealization  = props => {
                 onPlaybackStatusUpdate={(playbackStatus) => _onPlaybackStatusUpdate(playbackStatus)}
                 //rate={1.0}
                 volume={1.0}
-                isMuted={false}
+                isMuted={isMute}
                 resizeMode="cover"
                 shouldPlay={ true }
                 useNativeControls
