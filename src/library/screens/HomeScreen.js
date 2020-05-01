@@ -12,19 +12,19 @@ const HomeScreen = props => {
             </View>
             <View style={styles.front}>
               <View style={{ height: 100}} />
-              <View style={{height: 40,alignItems:'center',paddingLeft: width * 0.05}} >
+              <View style={{height: 40,alignItems:'center'}} >
                   <Text style={styles.welcomeBack}>
                       Welcome back
                   </Text>
               </View>
               <View style={{height: 23}} />
-              <View style={{height: 25, alignContent:'center',paddingLeft: width * 0.6}} >
+              <View style={{height: 25, alignItems:'center'}} >
                   <Text style={styles.welcomeMessage}>
                       Let's get you meditating
                   </Text>
               </View>
               <View style={{height: height*0.4 }} />
-              <View style={{height: 65, alignItems:'center',paddingLeft:width * 0.05}} >
+              <View style={{height: 65, alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
                       console.log('going to choose meditation')
@@ -39,11 +39,11 @@ const HomeScreen = props => {
                   </TouchableOpacity>
               </View>
               <View style={{height: 28}} />
-              <View style={{height: 65, alignItems:'center',paddingLeft:width * 0.05}} >
+              <View style={{height: 65, alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
                       console.log('going to FirstExperience')
-                      props.navigation.navigate({ routeName:  'FirstExperience'}) 
+                      props.navigation.navigate({ routeName:  'FirstExperience', tabBarVisible: false}) 
                   }}>  
                       <View style={styles.repeatMeditationButton}>
                           <Text style={styles.repeatMeditationText}>
@@ -53,23 +53,6 @@ const HomeScreen = props => {
                   </TouchableOpacity>
               </View>
             </View>
-            
-
-            
-
-            
-            {/* <Button title="Setup your own Meditation" onPress={() => {
-              props.navigation.navigate({routeName: 'Meditation'});
-            }}/>
-
-            <Button title="Music" onPress={() => {
-              props.navigation.navigate({routeName: 'Music'});
-            }}/>
-
-            <Button title="SelfRealization" onPress={() => {
-              props.navigation.navigate({routeName: 'SelfRealization'});
-            }}/> */}
-            
             
           </View>
         
@@ -112,8 +95,13 @@ const styles = StyleSheet.create({
   },
   front:{
     position: 'absolute',
-    zIndex: 1,
-    alignItems: 'center'
+    zIndex: 2,
+    flex: 1,
+    alignItems: 'center',
+    right: 0,
+    left: 0,
+    bottom: 0,
+    top:0
   },
   meditationButtonText: {
     width: 200, 
@@ -147,6 +135,7 @@ repeatMeditationText: {
   lineHeight:16,
   letterSpacing:0.96,
   color:"#707070",
+  textAlign: 'center'
   
 },
 repeatMeditationButton: {

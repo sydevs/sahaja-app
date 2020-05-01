@@ -1,17 +1,18 @@
 import React from 'react';
-import {StyleSheet,View,Text,TouchableOpacity,Image} from 'react-native';
+import {StyleSheet,View,Text,TouchableOpacity,Dimensions} from 'react-native';
 import ArrowSvg from '../../res/svgs/Arrow'
 
+const { width, height } = Dimensions.get('window')
 const YourFirstMeditation = props => {
     return (
         <View style={styles.screen}>
-            <View style={{ height: 104}} />
+            <View style={{ height: height*0.16}} />
             <View style={{height: 40,alignItems:'center'}} >
                 <Text style={styles.welcome}>
                     Your first meditation
                 </Text>
             </View>
-            <View style={{height: 23}} />
+            <View style={{height: height*0.1}} />
             <View style={{height: 30, alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     1. Find a quite place, 
@@ -22,7 +23,7 @@ const YourFirstMeditation = props => {
                      sit back and relax
                 </Text>
             </View>
-            <View style={{height: 53}} />
+            <View style={{height: height*0.1}} />
             <View style={{height: 25, alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     2. It will only take 9 
@@ -38,7 +39,7 @@ const YourFirstMeditation = props => {
                     change your life
                 </Text>
             </View>
-            <View style={{height: 66}} />
+            <View style={{height: height*0.12}} />
             <View style={{height: 65, alignItems:'center'}} >
                 <TouchableOpacity style={{alignItems:'center'}}
                 onPress={() => {
@@ -112,6 +113,9 @@ const styles = StyleSheet.create({
         letterSpacing: 0.2,
         color: "#7B7B7B",
         borderColor: "#7B7B7B",
+        right: 0,
+        marginRight: 0,
+        paddingRight: 0
     },
     welcomeButton: {
         borderWidth: 1,

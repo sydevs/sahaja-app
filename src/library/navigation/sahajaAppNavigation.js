@@ -1,6 +1,7 @@
 import { createAppContainer } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { createStackNavigator } from 'react-navigation-stack'
+import {View} from 'react-native'
 import HomeScreen from '../screens/HomeScreen';
 import Meditation from '../screens/Meditation';
 import Music from '../screens/Music';
@@ -40,7 +41,8 @@ const bottomTabNavigator = createBottomTabNavigator({
     navigationOptions: {
       tabBarIcon: (tabInfo) => {
         return <HomeIcon/>
-      }
+      },
+      tabBarVisible: true
     }
   },
   Meditate : {
@@ -64,12 +66,31 @@ const bottomTabNavigator = createBottomTabNavigator({
 },{
   tabBarOptions: {
     activeTintColor: '#FFDDA6',
+    showIcon: true,
     style: {
       fontFamily: 'raleway-regular',
       fontStyle: "normal",
       fontWeight: "normal",
       color: "#7B7B7B",
-      fontSize: 14
+      fontSize: 14,
+      padding: 20
+    },
+    iconStyle: {
+      flexGrow: 0,
+      marginTop: 1.5,
+      padding: 0,
+      height: 30,
+      width: 30
+    },
+    tabStyle: {
+      height: 45
+    },
+    labelStyle: {
+      fontSize: 15,
+      fontFamily: 'raleway-regular',
+      fontStyle: "normal",
+      color: '#7B7B7B',
+      top: 5
     }
   }
 });

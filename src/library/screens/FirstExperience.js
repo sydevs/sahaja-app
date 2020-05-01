@@ -1,27 +1,28 @@
 import React from 'react';
-import {StyleSheet,View,Text,TouchableOpacity,Image} from 'react-native';
+import {StyleSheet,View,Text,TouchableOpacity,Image,Dimensions} from 'react-native';
 import R from '../../res/R'
 
+const { width, height } = Dimensions.get('window')
 const FirstExperience = props => {
     return (
         <View style={styles.screen}>
-            <View style={{ height: 86}} />
+            <View style={{ height: height * 0.14}} />
             <View style={{height: 40,alignItems:'center'}} >
                 <Text style={styles.welcome}>
                     Welcome
                 </Text>
             </View>
-            <View style={{height: 23}} />
+            <View style={{height: height * 0.05}} />
             <View style={{height: 25, alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     Let's get you meditating
                 </Text>
             </View>
-            <View style={{height: 53}} />
+            <View style={{height: height * 0.07}} />
             <View style={{height: 228, alignItems:'center'}} >
                 <Image style={styles.welcomeImage} source={R.images.welcomeImage} resizeMode='cover'/>
             </View>
-            <View style={{height: 66}} />
+            <View style={{height: height * 0.08}} />
             <View style={{height: 65, alignItems:'center'}} >
                 <TouchableOpacity style={{alignItems:'center'}} 
                     onPress={() => {

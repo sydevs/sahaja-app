@@ -32,6 +32,10 @@ const SelfRealization  = props => {
     );
 };
 
+SelfRealization.navigationOptions = {
+    tabBarVisible: false
+};
+
 
 const styles = StyleSheet.create({
     screen : {

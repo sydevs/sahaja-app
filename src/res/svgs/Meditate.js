@@ -13,6 +13,6 @@ export default function Meditate(){
     </svg>
     `
 
-    const MeditateSvg = () => <SvgXml xml={arrow} width="23" height="27"/>
+    const MeditateSvg = () => <SvgXml xml={arrow} width="30" height="30"/>
     return  <MeditateSvg/>;
 }
