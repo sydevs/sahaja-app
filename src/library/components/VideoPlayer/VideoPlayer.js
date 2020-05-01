@@ -1,26 +1,33 @@
-import React from 'react';
-import {View , Text, StyleSheet, Button} from 'react-native'
+import * as React from 'react';
+import {View , Text, StyleSheet, Button,Dimensions} from 'react-native'
 import { Video } from 'expo-av';
 
+const { width, height } = Dimensions.get('window')
 const VideoPlayer  = props => {
     const id = props.navigation.getParam('id');
     const videoUrl = props.navigation.getParam('videoUrl');
+    const _onPlaybackStatusUpdate = (playbackStatus) => {
+        if (playbackStatus.didJustFinish){
+          // The player has just finished playing and will stop.
+          console.log('video finished, going to home scren ...')
+          props.navigation.navigate({ routeName:  'Meditation'}) 
+        }
+    };
+
+
     return (
          <View style={styles.screen}>
-            <Text>Video Player Screen - {id}</Text>
-            <Video
+                <Video
+                ref={this._handleVideoRef}
                 source={{ uri: videoUrl }}
                 rate={1.0}
                 volume={1.0}
                 isMuted={false}
                 resizeMode="cover"
                 shouldPlay
-                isLooping
-                style={{ width: 350, height: 550 }}
+                useNativeControls
+                style={styles.video}
                 />
-            <Button title="Go Back to Home" onPress={() => {
-                 props.navigation.popToTop();
-             }}/>
         </View>
     );
 };
@@ -31,6 +38,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    video: {
+        width: width,
+        height: height * 0.8
     }
 });
 

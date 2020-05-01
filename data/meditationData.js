@@ -279,11 +279,11 @@ export const MEDITATIONS = [
     new Meditation('satisfied','Satisfied',satisfiedImage,
         [
             new MeditationCategory('5mins',
-                'https://player.vimeo.com/external/357098922.hd.mp4?s=edbbbfaa353745e69fe427d84e8697ff2232a48e&profile_id=175&oauth2_token_id=1254753263'),
+                'https://player.vimeo.com/external/357099012.sd.mp4?s=d77a9c1f67da26c930927ba1ccbd60ba83c308f0&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
             new MeditationCategory('10mins',
-                'https://player.vimeo.com/external/356946014.hd.mp4?s=01b94807267b93a478a3fa4bc2bd7f96f18b1453&profile_id=175&oauth2_token_id=1254753263'),
+                'https://player.vimeo.com/external/356946608.sd.mp4?s=8cd3cd5c20476657a6fb9f83422438bcbdcf7580&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
             new MeditationCategory('15mins',
-                'https://player.vimeo.com/external/357112355.hd.mp4?s=8df90ec22620c4b6c2de1a86ca9e8516a7c9e4ea&profile_id=175&oauth2_token_id=1254753263')
+                'https://player.vimeo.com/external/357112897.sd.mp4?s=5c5e65a247f4057d85b728304ba7ab3c8fc616a5&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),

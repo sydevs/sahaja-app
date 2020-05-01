@@ -1,10 +1,10 @@
 import React from 'react';
-import {View , Text, StyleSheet, Button, TouchableOpacity} from 'react-native'
+import {View , Text, StyleSheet, Dimensions, TouchableOpacity} from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
 import colors from '../../res/colors'
 
 
-
+const { width, height } = Dimensions.get('window')
 const ChooseDuration  = props => {
     const meditationCategories = props.navigation.getParam('meditationCategories');
     const renderGridItems = (itemData) => {
@@ -18,8 +18,9 @@ const ChooseDuration  = props => {
                         })
                     }}>
                     <View style={styles.gridItems}>
-                        <View style={styles.container}>
-                            <Text style={styles.title}>{itemData.item.id}</Text>
+                        <View style={styles.circleButton}>
+                            <Text style={styles.durationText}>{itemData.item.id}</Text>
+                            
                         </View>
                    </View>
                 </TouchableOpacity>
@@ -27,8 +28,22 @@ const ChooseDuration  = props => {
     };
     return (
          <View style={styles.screen}>
-             <Text style={styles.title}>I have</Text>
-             <FlatList keyExtractor={(item,index) => item.id} data={ meditationCategories } renderItem= {renderGridItems} numColumns={3}/>            
+             <View style={{ height: height * 0.15}} />
+             <View style={{height: 40,alignItems:'center'}} >
+                <Text style={styles.titleText}>
+                    How much time 
+                </Text>
+            </View>
+            <View style={{height: 40,alignItems:'center'}} >
+                <Text style={styles.titleText}>
+                    do you have ?
+                </Text>
+            </View>
+            <View style={{ height: height * 0.25}} />
+            <View style={{flex: 1}} >
+                <FlatList keyExtractor={(item,index) => item.id} data={ meditationCategories } renderItem= {renderGridItems} numColumns={3}/>            
+            </View>
+             
         </View>
     );
 };
@@ -37,13 +52,13 @@ const styles = StyleSheet.create({
     screen : {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        flexDirection: 'column'
     },
     gridItems: {
         flex: 1,
         margin: 15,
-        height: 80,
-        borderRadius:10,
+        height: 100,
         overflow: 'hidden'
     },
     container: {
@@ -62,7 +77,39 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'open-sans-regular',
         fontSize: 22
-    }
+    },
+    titleText: {
+        width: 345,
+        height: 40,
+        fontFamily: 'raleway-regular',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: 30,
+        lineHeight: 40,
+        textAlign: "center",
+        letterSpacing: 0.8,
+        color: '#7B7B7B'
+    },
+    durationText: {
+        height: 19,
+        fontFamily: 'raleway-regular',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 16,
+        lineHeight: 19,
+        color: "#7B7B7B",
+        textAlign: 'center',
+        justifyContent: 'center',
+        marginTop: 35
+    },
+    circleButton:{
+        flex:1,
+        height: 100,
+        width: 100,  //The Width must be the same as the height
+        borderRadius: 200, //Then Make the Border Radius twice the size of width or Height   
+        borderWidth: 1,
+        borderColor: '#555555'
+      }
 });
 
 export default ChooseDuration; 

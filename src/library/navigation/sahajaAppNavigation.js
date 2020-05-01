@@ -6,6 +6,7 @@ import Meditation from '../screens/Meditation';
 import Music from '../screens/Music';
 import SelfRealization from '../screens/SelfRealization'
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer'
+import MusicPlayer from '../components/AudioPlayer/MusicPlayer'
 import ChooseDuration from '../screens/ChooseDuration'
 import colors from '../../res/colors'
 import LoadingScreen from '../screens/LoadingScreen'
@@ -23,6 +24,7 @@ const AppNavigator = createStackNavigator({
   Music: Music,
   SelfRealization: SelfRealization,
   VideoPlayer: VideoPlayer,
+  MusicPlayer: MusicPlayer,
   ChooseDuration: ChooseDuration,
   FirstExperience: FirstExperience,
   YourFirstMeditation: YourFirstMeditation
@@ -56,7 +58,7 @@ const bottomTabNavigator = createBottomTabNavigator({
       tabBarIcon: (tabInfo) => {
         return <MusicIcon/>
       },
-      tabBarVisible: false
+      tabBarVisible: true
     }
   }
 },{

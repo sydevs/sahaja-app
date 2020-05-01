@@ -3,7 +3,7 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "expoServerNgrokUrl": "https://nm-dyw.abhijeetnaikare.sahaja-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.nm-dyw.abhijeetnaikare.sahaja-app.exp.direct",
+  "ngrokPid": 67761
 }

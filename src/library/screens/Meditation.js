@@ -1,16 +1,16 @@
 import React from 'react';
-import {View , Text, StyleSheet, Button, TouchableOpacity} from 'react-native'
+import {View , Text, StyleSheet, TouchableOpacity,Dimensions} from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
 import { MEDITATIONS } from '../../../data/meditationData'
 import { SvgXml } from "react-native-svg";
-import CalmImage from '../../res/svgs/CalmImage'
 
+const { width, height } = Dimensions.get('window')
 const Meditation  = props => {
 
-    
-
     const renderGridItems = (itemData) => {
-        return (<TouchableOpacity onPress={() => {
+        return (
+                    <View style={styles.gridItems}>
+                        <TouchableOpacity onPress={() => {
                     props.navigation.navigate({
                             routeName:  'ChooseDuration',
                             params: {
@@ -20,11 +20,11 @@ const Meditation  = props => {
                             }
                         })
                     }}>
-                    <View style={styles.gridItems}>
+                        <View style={styles.meditationTypeImage}><SvgXml xml={itemData.item.imageData} width="51" height="33"/></View>
                         <Text style={styles.meditationTypeText} numberOfLines={2}>{itemData.item.title}</Text>
-                        <SvgXml xml={itemData.item.imageData} width="51" height="33"/>
+                        </TouchableOpacity>
                    </View>
-                </TouchableOpacity>
+                
             );
     };
     return (
@@ -59,7 +59,11 @@ const styles = StyleSheet.create({
         flexDirection: 'column'
     },
     gridItems: {
-        flex: 1
+        padding: 20,
+        marginVertical: 8,
+        width: width*0.5,
+        justifyContent: 'center',
+        flexDirection: "column"
     },
     container: {
         flex: 1,
@@ -93,7 +97,13 @@ const styles = StyleSheet.create({
         fontWeight: 'normal',
         fontSize: 17,
         lineHeight: 20,
-        color: "#555555"
+        color: "#555555",
+        justifyContent: "center",
+        textAlign: "center"
+      },
+      meditationTypeImage: {
+        alignItems: "center",
+        marginBottom: 10
       }
 });
 
