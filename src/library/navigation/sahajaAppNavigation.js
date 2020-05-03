@@ -19,8 +19,8 @@ import HomeIcon from '../../res/svgs/Home'
 import React from 'react'
 
 const AppNavigator = createStackNavigator({
-  Home: HomeScreen,
   LoadingScreen: LoadingScreen,
+  Home: HomeScreen,
   Meditation: Meditation,
   Music: Music,
   SelfRealization: SelfRealization,

@@ -1,18 +1,32 @@
 import React from 'react';
-import {StyleSheet,View,Text,TouchableOpacity,Dimensions} from 'react-native';
+import {StyleSheet,View,Text,TouchableOpacity,Dimensions,AsyncStorage} from 'react-native';
 import ArrowSvg from '../../res/svgs/Arrow'
+import { LinearGradient } from 'expo-linear-gradient';
 
+const HAS_LAUNCHED = 'hasLaunched';
 const { width, height } = Dimensions.get('window')
 const YourFirstMeditation = props => {
+    
     return (
         <View style={styles.screen}>
             <View style={{ height: height*0.16}} />
-            <View style={{height: 40,alignItems:'center'}} >
-                <Text style={styles.welcome}>
-                    Your first meditation
-                </Text>
+            <View>
+                <View style={{height: 80,flex: 1,zIndex: 0,width: width * 0.3,left: width * 0.1}}>
+                    <LinearGradient
+                            colors={['#FFFFFF','#EBF4F3']}
+                            start={{ x: 0, y: 1 }}
+                            end={{ x: 1, y: 1 }}
+                            style={{ height: 80 }}/>
+                </View>
+                <View style={{height: 80,alignItems:'center',zIndex: 1,position: 'absolute',right: 0,left: 0}} >
+                    
+                        <Text style={styles.welcome}>
+                            Your first meditation
+                        </Text>
+                    
+                </View>
             </View>
-            <View style={{height: height*0.1}} />
+            <View style={{height: height*0.2}} />
             <View style={{height: 30, alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     1. Find a quite place, 
@@ -43,6 +57,8 @@ const YourFirstMeditation = props => {
             <View style={{height: 65, alignItems:'center'}} >
                 <TouchableOpacity style={{alignItems:'center'}}
                 onPress={() => {
+                    console.log('setting has launched')
+                    AsyncStorage.setItem(HAS_LAUNCHED, 'true');
                     console.log('going to self realization')
                     props.navigation.navigate({ routeName:  'SelfRealization'}) 
                 }}>  
@@ -71,7 +87,7 @@ const styles = StyleSheet.create({
     },
     welcome: {
         width: 345,
-        height: 40,
+        height: 80,
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
@@ -79,7 +95,8 @@ const styles = StyleSheet.create({
         lineHeight: 40,
         textAlign: "center",
         letterSpacing: 0.8,
-        color: '#7B7B7B'
+        color: '#7B7B7B',
+        top: 20
     },
     welcomeMessage: {
         position: "absolute",
