@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {View , Text, StyleSheet, Button,Dimensions} from 'react-native'
+import {View , Text, StyleSheet, SafeAreaView,Dimensions} from 'react-native'
 import { Video } from 'expo-av';
 
 const { width, height } = Dimensions.get('window')
@@ -10,7 +10,7 @@ const VideoPlayer  = props => {
     const _onPlaybackStatusUpdate = (playbackStatus) => {
         if (playbackStatus.didJustFinish){
           // The player has just finished playing and will stop.
-          console.log('video finished, going to home scren ...')
+          console.log('video finished, going to meditation screen ...')
           props.navigation.navigate({ routeName:  'Meditation'}) 
         }
     };
@@ -18,14 +18,14 @@ const VideoPlayer  = props => {
     const didBlurSubscription = props.navigation.addListener(
         'didBlur',
         payload => {
-          console.debug('didBlur', payload);
+          //console.debug('didBlur', payload);
           setMute(true)
         }
       );
 
 
     return (
-         <View style={styles.screen}>
+         <SafeAreaView style={styles.screen}>
                 <Video
                 ref={this._handleVideoRef}
                 onPlaybackStatusUpdate={(playbackStatus) => _onPlaybackStatusUpdate(playbackStatus)}
@@ -33,12 +33,12 @@ const VideoPlayer  = props => {
                 rate={1.0}
                 volume={1.0}
                 isMuted={isMute}
-                resizeMode="cover"
+                resizeMode="stretch"
                 shouldPlay
                 useNativeControls
                 style={styles.video}
                 />
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     },
     video: {
         width: width,
-        height: height * 0.8
+        height: height
     }
 });
 

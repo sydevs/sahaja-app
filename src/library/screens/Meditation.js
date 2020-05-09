@@ -40,7 +40,7 @@ const Meditation  = props => {
                     wish to feel ?
                 </Text>
             </View>
-            <View style={{ height: 50}} />
+            <View style={{ height: 30}} />
              <FlatList keyExtractor={(item,index) => item.id} data={ MEDITATIONS } renderItem= {renderGridItems} numColumns={2}/>
         </View>
     );

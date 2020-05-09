@@ -11,13 +11,13 @@ const HomeScreen = props => {
               <HomeBackground ></HomeBackground>
             </View>
             <View style={styles.front}>
-              <View style={{ height: 100}} />
+              <View style={{ height: height*0.16}} />
               <View style={{height: 40,alignItems:'center'}} >
                   <Text style={styles.welcomeBack}>
                       Welcome back
                   </Text>
               </View>
-              <View style={{height: 23}} />
+              <View style={{height: height*0.05}} />
               <View style={{height: 25, alignItems:'center'}} >
                   <Text style={styles.welcomeMessage}>
                       Let's get you meditating
@@ -38,7 +38,7 @@ const HomeScreen = props => {
                       </View>   
                   </TouchableOpacity>
               </View>
-              <View style={{height: 28}} />
+              <View style={{height: height*0.02}} />
               <View style={{height: 65, alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {

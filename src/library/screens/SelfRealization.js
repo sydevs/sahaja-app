@@ -17,7 +17,7 @@ const SelfRealization  = props => {
     const didBlurSubscription = props.navigation.addListener(
         'didBlur',
         payload => {
-          console.debug('didBlur', payload);
+          //console.debug('didBlur', payload);
           setMute(true)
         }
       );
@@ -32,7 +32,7 @@ const SelfRealization  = props => {
                 //rate={1.0}
                 volume={1.0}
                 isMuted={isMute}
-                resizeMode="cover"
+                resizeMode="stretch"
                 shouldPlay={ true }
                 useNativeControls
                 style={styles.video}

@@ -7,6 +7,6 @@ const Music = `<svg width="24" height="27" viewBox="0 0 24 27" fill="none" xmlns
 </svg>
 `
 
-    const MusicSvg = () => <SvgXml xml={Music} width="30" height="30" />
+    const MusicSvg = () => <SvgXml xml={Music} width="35" height="35" />
     return  <MusicSvg/>;
 }

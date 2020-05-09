@@ -1,7 +1,7 @@
 import { createAppContainer } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import { createStackNavigator } from 'react-navigation-stack'
-import {View} from 'react-native'
+import {View,Platform} from 'react-native'
 import HomeScreen from '../screens/HomeScreen';
 import Meditation from '../screens/Meditation';
 import Music from '../screens/Music';
@@ -64,6 +64,8 @@ const bottomTabNavigator = createBottomTabNavigator({
     }
   }
 },{
+  headerMode: 'none',        // I don't want a NavBar at top
+  tabBarPosition: 'bottom',
   tabBarOptions: {
     activeTintColor: '#FFDDA6',
     showIcon: true,
@@ -73,24 +75,28 @@ const bottomTabNavigator = createBottomTabNavigator({
       fontWeight: "normal",
       color: "#7B7B7B",
       fontSize: 14,
-      padding: 20
+      padding: 20,
+      height: (Platform.OS === 'ios') ? 48 : 50
     },
     iconStyle: {
       flexGrow: 0,
       marginTop: 1.5,
       padding: 0,
       height: 30,
-      width: 30
+      width: 30,
+      borderColor: 'black',
+      borderWidth: 2
     },
+    showLabel: (Platform.OS !== 'android'),
     tabStyle: {
-      height: 45
+      height: (Platform.OS === 'ios') ? 35 : 17
     },
     labelStyle: {
       fontSize: 15,
       fontFamily: 'raleway-regular',
       fontStyle: "normal",
       color: '#7B7B7B',
-      top: 5
+      top: 12
     }
   }
 });
