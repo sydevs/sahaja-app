@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet,View,Text,TouchableOpacity,Dimensions,AsyncStorage} from 'react-native';
 import ArrowSvg from '../../res/svgs/Arrow'
 import { LinearGradient } from 'expo-linear-gradient';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const HAS_LAUNCHED = 'hasLaunched';
 const { width, height } = Dimensions.get('window')
@@ -9,16 +10,16 @@ const YourFirstMeditation = props => {
     
     return (
         <View style={styles.screen}>
-            <View style={{ height: height*0.16}} />
+            <View style={{ height: hp("16%")}} />
             <View>
-                <View style={{height: 80,flex: 1,zIndex: 0,width: width * 0.3,left: width * 0.1}}>
+                <View style={{height: hp("9.17%"),flex: 1,zIndex: 0,width: wp("30%"),left: wp("10%")}}>
                     <LinearGradient
                             colors={['#FFFFFF','#EBF4F3']}
                             start={{ x: 0, y: 1 }}
                             end={{ x: 1, y: 1 }}
-                            style={{ height: 80 }}/>
+                            style={{ height: hp("9.17%") }}/>
                 </View>
-                <View style={{height: 80,alignItems:'center',zIndex: 1,position: 'absolute',right: 0,left: 0}} >
+                <View style={{height: hp("9.17%"),alignItems:'center',zIndex: 1,position: 'absolute',right: 0,left: 0}} >
                     
                         <Text style={styles.welcome}>
                             Your first meditation
@@ -26,35 +27,35 @@ const YourFirstMeditation = props => {
                     
                 </View>
             </View>
-            <View style={{height: height*0.2}} />
-            <View style={{height: 30, alignItems:'center'}} >
+            <View style={{height: hp("20%")}} />
+            <View style={{height: hp("3.5%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     1. Find a quite place, 
                 </Text>
             </View>
-            <View style={{height: 25, alignItems:'center'}} >
+            <View style={{height: hp("2.86%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                      sit back and relax
                 </Text>
             </View>
-            <View style={{height: height*0.1}} />
-            <View style={{height: 25, alignItems:'center'}} >
+            <View style={{height: hp("10%")}} />
+            <View style={{height: hp("2.86%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     2. It will only take 9 
                 </Text>
             </View>
-            <View style={{height: 25, alignItems:'center'}} >
+            <View style={{height: hp("2.86%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     minutes and will literally change your life
                 </Text>
             </View>
-            <View style={{height: 25, alignItems:'center'}} >
+            <View style={{height: hp("2.86%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     change your life
                 </Text>
             </View>
-            <View style={{height: height*0.12}} />
-            <View style={{height: 65, alignItems:'center'}} >
+            <View style={{height: hp("12%")}} />
+            <View style={{height: hp("7.45%"), alignItems:'center'}} >
                 <TouchableOpacity style={{alignItems:'center'}}
                 onPress={() => {
                     console.log('setting has launched')
@@ -82,50 +83,50 @@ const styles = StyleSheet.create({
         //alignItems: 'center',
     },
     testView: {
-        borderWidth: 2,
+        borderWidth: wp("0.48%"),
         borderColor: '#979797'
     },
     welcome: {
-        width: 345,
-        height: 80,
+        width: wp("83.94%"),
+        height: hp("9.17%"),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 30,
+        fontSize: wp("7.299%"),
         lineHeight: 40,
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B',
-        top: 20
+        top: hp("2.29%")
     },
     welcomeMessage: {
         position: "absolute",
-        width: 243,
-        height: 25,
+        width: wp("59.12%"),
+        height: hp("2.86%"),
         fontFamily: "raleway-regular",
         fontStyle: "normal",
         fontWeight: "normal",
-        fontSize: 20,
-        lineHeight: 25,
+        fontSize: wp("4.86%"),
+        lineHeight: hp("2.74%"),
         textAlign: "center",
         letterSpacing: 0.625,
         color: "#7B7B7B"
     },
     welcomeImage: {
         position: "absolute",
-        width: 346,
-        height: 228,
+        width: wp("84.18%"),
+        height: hp("26.14%"),
         //"left":"15px",
         //top: 227
     },
     welcomeButtonText: {
-        width: 200, 
-        height: 19,
+        width: wp("48.66%"), 
+        height: hp("2.17%"),
         fontFamily: "raleway-regular",
         fontStyle: "normal",
         fontWeight: "normal",
-        fontSize: 16,
-        lineHeight: 19,
+        fontSize: wp("3.86%"),
+        lineHeight: hp("2.17%"),
         textAlign: "center",
         letterSpacing: 0.2,
         color: "#7B7B7B",
@@ -136,8 +137,8 @@ const styles = StyleSheet.create({
     },
     welcomeButton: {
         borderWidth: 1,
-        width: 236,
-        height: 65,
+        width: wp("57.42%"),
+        height: hp("7.45%"),
         borderColor: '#979797',
         justifyContent: 'center',
         flexDirection: 'row',
@@ -145,7 +146,7 @@ const styles = StyleSheet.create({
         
     },
     welcomeView: {
-        top: 100,
+        top: hp("11.465"),
         alignSelf: 'center',
         borderWidth: 2,
         borderColor: '#979797',
@@ -158,7 +159,7 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 0,  height: 2},
         shadowRadius: 10,
         elevation: 3,
-        padding: 15,
+        padding: wp("3.64%"),
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         backgroundColor: '#E0E0E0'

@@ -2,7 +2,7 @@ import React from 'react';
 import {View , Text, StyleSheet, Dimensions, TouchableOpacity} from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
 import colors from '../../res/colors'
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const { width, height } = Dimensions.get('window')
 const ChooseDuration  = props => {
@@ -28,18 +28,18 @@ const ChooseDuration  = props => {
     };
     return (
          <View style={styles.screen}>
-             <View style={{ height: height * 0.15}} />
-             <View style={{height: 40,alignItems:'center'}} >
+             <View style={{ height: hp("15%")}} />
+             <View style={{height: hp("4.58%"),alignItems:'center'}} >
                 <Text style={styles.titleText}>
                     How much time 
                 </Text>
             </View>
-            <View style={{height: 40,alignItems:'center'}} >
+            <View style={{height: hp("4.58%"),alignItems:'center'}} >
                 <Text style={styles.titleText}>
                     do you have ?
                 </Text>
             </View>
-            <View style={{ height: height * 0.25}} />
+            <View style={{ height: hp("25%")}} />
             <View style={{flex: 1}} >
                 <FlatList keyExtractor={(item,index) => item.id} data={ meditationCategories } renderItem= {renderGridItems} numColumns={3}/>            
             </View>
@@ -57,8 +57,8 @@ const styles = StyleSheet.create({
     },
     gridItems: {
         flex: 1,
-        margin: 15,
-        height: 100,
+        margin: wp('3.65%'),
+        height: hp("11.46%"),
         overflow: 'hidden'
     },
     container: {
@@ -69,44 +69,44 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 0,  height: 2},
         shadowRadius: 10,
         elevation: 3,
-        padding: 15,
+        padding: wp('3.64%'),
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         backgroundColor: '#E0E0E0'
     },
     title: {
         fontFamily: 'open-sans-regular',
-        fontSize: 22
+        fontSize: wp("5.35%")
     },
     titleText: {
-        width: 345,
-        height: 40,
+        width: wp("83.94%"),
+        height: hp("4.58%"),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 30,
-        lineHeight: 40,
+        fontSize: wp('7.29%'),
+        lineHeight: hp("4.58%"),
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B'
     },
     durationText: {
-        height: 19,
+        height: hp("2.97%"),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'bold',
-        fontSize: 16,
-        lineHeight: 19,
+        fontSize: wp('3.89%'),
+        lineHeight: hp("2.17%"),
         color: "#7B7B7B",
         textAlign: 'center',
         justifyContent: 'center',
-        marginTop: 35
+        marginTop: hp("4.01%")
     },
     circleButton:{
         flex:1,
-        height: 100,
-        width: 100,  //The Width must be the same as the height
-        borderRadius: 200, //Then Make the Border Radius twice the size of width or Height   
+        height: wp('24%'),
+        width: wp('24%'),  //The Width must be the same as the height
+        borderRadius: wp('48%'), //Then Make the Border Radius twice the size of width or Height   
         borderWidth: 1,
         borderColor: '#555555'
       }

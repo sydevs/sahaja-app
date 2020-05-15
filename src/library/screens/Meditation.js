@@ -3,6 +3,8 @@ import {View , Text, StyleSheet, TouchableOpacity,Dimensions} from 'react-native
 import { FlatList } from 'react-native-gesture-handler';
 import { MEDITATIONS } from '../../../data/meditationData'
 import { SvgXml } from "react-native-svg";
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 
 const { width, height } = Dimensions.get('window')
 const Meditation  = props => {
@@ -20,7 +22,7 @@ const Meditation  = props => {
                             }
                         })
                     }}>
-                        <View style={styles.meditationTypeImage}><SvgXml xml={itemData.item.imageData} width="51" height="33"/></View>
+                        <View style={styles.meditationTypeImage}><SvgXml xml={itemData.item.imageData} width={wp("12.4%")} height={hp("3.82%")}/></View>
                         <Text style={styles.meditationTypeText} numberOfLines={2}>{itemData.item.title}</Text>
                         </TouchableOpacity>
                    </View>
@@ -29,19 +31,24 @@ const Meditation  = props => {
     };
     return (
          <View style={styles.screen}>
-             <View style={{ height: 90}} />
-             <View style={{height: 40,alignItems:'center'}} >
+             <View style={{ height: hp("10.32%")}} />
+             <View style={{height: hp("4.58%"),alignItems:'center'}} >
                 <Text style={styles.titleText}>
                     How do you 
                 </Text>
             </View>
-            <View style={{height: 40,alignItems:'center'}} >
+            <View style={{height: hp("4.58%"),alignItems:'center'}} >
                 <Text style={styles.titleText}>
                     wish to feel ?
                 </Text>
             </View>
-            <View style={{ height: 30}} />
-             <FlatList keyExtractor={(item,index) => item.id} data={ MEDITATIONS } renderItem= {renderGridItems} numColumns={2}/>
+            <View style={{ height: hp("3.44%")}} />
+             <FlatList 
+             keyExtractor={(item,index) => item.id} 
+             data={ MEDITATIONS } 
+             //RenderItem at time of click
+             renderItem= {renderGridItems} 
+             numColumns={2}/>
         </View>
     );
 };
@@ -59,9 +66,9 @@ const styles = StyleSheet.create({
         flexDirection: 'column'
     },
     gridItems: {
-        padding: 20,
-        marginVertical: 8,
-        width: width*0.5,
+        padding: wp('4.86%'),
+        marginVertical: hp('0.9%'),
+        width: wp('50%'),
         justifyContent: 'center',
         flexDirection: "column"
     },
@@ -73,37 +80,37 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 0,  height: 2},
         shadowRadius: 10,
         elevation: 3,
-        padding: 15,
+        padding: wp('3.64%'),
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
         backgroundColor: '#E0E0E0'
     },
     titleText: {
-        width: 345,
-        height: 40,
+        width: wp('83.945'),
+        height: hp('4.87%'),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 30,
-        lineHeight: 40,
+        fontSize: wp('7.29%'),
+        lineHeight: hp("4.58%"),
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B'
     },
     meditationTypeText: {
-        height: 20,
+        height: hp('2.29%'),
         fontFamily: 'raleway-regular',
         fontStyle: "normal",
         fontWeight: 'normal',
-        fontSize: 17,
-        lineHeight: 20,
+        fontSize: wp('4.13%'),
+        lineHeight: hp("2.17%"),
         color: "#555555",
         justifyContent: "center",
         textAlign: "center"
       },
       meditationTypeImage: {
         alignItems: "center",
-        marginBottom: 10
+        marginBottom: hp('1.14%')
       }
 });
 

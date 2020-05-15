@@ -1,30 +1,30 @@
 import React,{ Component } from 'react';
 import { StyleSheet, Text, View, Image, Button,TouchableOpacity,Dimensions } from 'react-native';
 import HomeBackground from '../../res/svgs/HomeBackground'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const { width, height } = Dimensions.get('window')
 const HomeScreen = props => {
-  
   return (
           <View style = {styles.screen} >
             <View style={styles.background}>
               <HomeBackground ></HomeBackground>
             </View>
             <View style={styles.front}>
-              <View style={{ height: height*0.16}} />
-              <View style={{height: 40,alignItems:'center'}} >
+              <View style={{ height: hp('16%')}} />
+              <View style={{height: hp('4.5%'),alignItems:'center'}} >
                   <Text style={styles.welcomeBack}>
                       Welcome back
                   </Text>
               </View>
-              <View style={{height: height*0.05}} />
-              <View style={{height: 25, alignItems:'center'}} >
+              <View style={{height: hp('5%')}} />
+              <View style={{height: hp('2.8%'), alignItems:'center'}} >
                   <Text style={styles.welcomeMessage}>
                       Let's get you meditating
                   </Text>
               </View>
-              <View style={{height: height*0.4 }} />
-              <View style={{height: 65, alignItems:'center'}} >
+              <View style={{height: hp('40%') }} />
+              <View style={{height: hp('7.45%'), alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
                       console.log('going to choose meditation')
@@ -38,8 +38,8 @@ const HomeScreen = props => {
                       </View>   
                   </TouchableOpacity>
               </View>
-              <View style={{height: height*0.02}} />
-              <View style={{height: 65, alignItems:'center'}} >
+              <View style={{height: hp('2%')}} />
+              <View style={{height: hp('7.5%'), alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
                       console.log('going to FirstExperience')
@@ -65,26 +65,27 @@ const styles = StyleSheet.create({
     flexDirection: 'column'
   },
   welcomeBack: {
-    width: 345,
-    height: 40,
+    width: wp('83.9%'),
+    height: hp('4.5%'),
     fontFamily: 'raleway-regular',
     fontStyle: 'normal',
     fontWeight: 'normal',
-    fontSize: 30,
-    lineHeight: 40,
+    // fontSize: 30,
+    fontSize: wp('7.2%'),
+    lineHeight: hp('4.5%'),
     textAlign: "center",
     letterSpacing: 0.8,
     color: '#7B7B7B'
   },
   welcomeMessage: {
     position: "absolute",
-    width: 243,
-    height: 25,
+    width: wp('59%'),
+    height: hp('2.8%'),
     fontFamily: "raleway-regular",
     fontStyle: "normal",
     fontWeight: "normal",
-    fontSize: 20,
-    lineHeight: 25,
+    fontSize: wp('4.8%'),
+    lineHeight: hp('2.8%'),
     textAlign: "center",
     letterSpacing: 0.625,
     color: "#7B7B7B"
@@ -104,13 +105,13 @@ const styles = StyleSheet.create({
     top:0
   },
   meditationButtonText: {
-    width: 200, 
-    height: 19,
+    width: wp('48.6%'), 
+    height: hp('2.1%'),
     fontFamily: "raleway-regular",
     fontStyle: "normal",
     fontWeight: "normal",
-    fontSize: 16,
-    lineHeight: 19,
+    fontSize: wp('3.89%'),
+    lineHeight: hp('2.17%'),
     textAlign: "center",
     letterSpacing: 0.2,
     color: "#7B7B7B",
@@ -118,8 +119,8 @@ const styles = StyleSheet.create({
 },
 meditationButton: {
     borderWidth: 1,
-    width: 248,
-    height: 65,
+    width: wp('60.34%'),
+    height: hp('7.45%'),
     borderColor: '#979797',
     justifyContent: 'center',
     flexDirection: 'row',
@@ -127,12 +128,12 @@ meditationButton: {
     
 },
 repeatMeditationText: {
-  height:16,
+  height:hp('1.83%'),
   fontFamily: 'raleway-regular',
   fontStyle:'normal',
   fontWeight:'normal',
-  fontSize:14,
-  lineHeight:16,
+  fontSize:wp('3.4%'),
+  lineHeight:hp('1.83%'),
   letterSpacing:0.96,
   color:"#707070",
   textAlign: 'center'
