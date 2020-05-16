@@ -1,0 +1,20 @@
+{
+    "develop": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-sahajaapp-develop-193352-authRole",
+            "UnauthRoleArn": "arn:aws:iam::235145909959:role/amplify-sahajaapp-develop-193352-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::235145909959:role/amplify-sahajaapp-develop-193352-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "amplify-sahajaapp-develop-193352-deployment",
+            "UnauthRoleName": "amplify-sahajaapp-develop-193352-unauthRole",
+            "StackName": "amplify-sahajaapp-develop-193352",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:235145909959:stack/amplify-sahajaapp-develop-193352/bbfffc20-9433-11ea-944a-0230a916724e",
+            "AmplifyAppId": "dsk5t0kiihf28"
+        },
+        "categories": {
+            "auth": {
+                "cognitof15be069": {}
+            }
+        }
+    }
+}

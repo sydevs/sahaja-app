@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Sahaja App",
+    "name": "We Meditate",
     "slug": "sahaja-app",
     "privacy": "public",
     "sdkVersion": "35.0.0",
@@ -25,12 +25,18 @@
     ],
     "ios": {
       "supportsTablet": true,
+      "bundleIdentifier": "co.wemeditate.sahajaapp",
+      "buildNumber": "1.0.0",
       "infoPlist": {
         "UIBackgroundModes": [
           "audio"
         ]
       }
     },
-    "description": "first draft"
+    "android": {
+      "package": "co.wemeditate.sahajaapp",
+      "versionCode": 1
+    },
+    "description": "Guided meditations for better life"
   }
 }

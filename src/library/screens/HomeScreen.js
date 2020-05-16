@@ -11,7 +11,7 @@ const HomeScreen = props => {
               <HomeBackground ></HomeBackground>
             </View>
             <View style={styles.front}>
-              <View style={{ height: height*0.16}} />
+              <View style={{ height: height*0.12}} />
               <View style={{height: 40,alignItems:'center'}} >
                   <Text style={styles.welcomeBack}>
                       Welcome back

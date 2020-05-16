@@ -1,0 +1,14 @@
+{
+	"auth": {
+		"cognitof15be069": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"analytics": {
+		"weMeditateApp": {
+			"service": "Pinpoint",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

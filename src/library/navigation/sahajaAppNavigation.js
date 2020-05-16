@@ -89,17 +89,16 @@ const bottomTabNavigator = createBottomTabNavigator({
     },
     showLabel: (Platform.OS !== 'android'),
     tabStyle: {
-      height: (Platform.OS === 'ios') ? 35 : 17
+      height: 20
     },
     labelStyle: {
       fontSize: 15,
       fontFamily: 'raleway-regular',
       fontStyle: "normal",
       color: '#7B7B7B',
-      top: 12
+      top: 10
     }
   }
 });
-
 
 export default createAppContainer(bottomTabNavigator);

@@ -1,0 +1,21 @@
+{
+    "appName": "weMeditateApp",
+    "roleName": "pinpointLambdaRolebd7fc199",
+    "cloudformationPolicyName": "cloudformationPolicybd7fc199",
+    "cloudWatchPolicyName": "cloudWatchPolicybd7fc199",
+    "pinpointPolicyName": "pinpointPolicybd7fc199",
+    "authPolicyName": "pinpoint_amplify_bd7fc199",
+    "unauthPolicyName": "pinpoint_amplify_bd7fc199",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

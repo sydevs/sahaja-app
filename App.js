@@ -3,6 +3,8 @@ import { StyleSheet } from 'react-native';
 import * as Font from 'expo-font'
 import { AppLoading} from 'expo';
 import AppNavigator from './src/library/navigation/sahajaAppNavigation'
+import Amplify, {Analytics} from 'aws-amplify';
+import awsconfig from './aws-exports';
 
 let customFonts = {
   'open-sans-bold': require('./src/fonts/OpenSans-Bold.ttf'),
@@ -27,6 +29,9 @@ export default class App extends Component {
 
   render() {
     console.log('In render()')
+    Amplify.configure(awsconfig);
+    //Analytics.configure({ disabled: true })
+    Analytics.record({ name: "App Started!" })
     if (this.state.fontsLoaded) {
       return  <AppNavigator/>;
     }else{

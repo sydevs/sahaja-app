@@ -1,6 +1,7 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {View , StyleSheet, Dimensions} from 'react-native'
 import { Video } from 'expo-av';
+import Amplify, {Analytics} from 'aws-amplify';
 
 const { width, height } = Dimensions.get('window')
 const SelfRealization  = props => {
@@ -21,6 +22,13 @@ const SelfRealization  = props => {
           setMute(true)
         }
       );
+
+    useEffect(() => { 
+        async function logEvent(){
+            Analytics.record({ name: "Self Realization!" })
+        }
+        logEvent();
+    },[]);
 
     return (
          <View style={styles.screen}>
