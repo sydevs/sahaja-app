@@ -9,7 +9,7 @@ const SelfRealization  = props => {
         if (playbackStatus.didJustFinish){
           // The player has just finished playing and will stop.
           console.log('video finished, going to home scren ...')
-          props.navigation.navigate({ routeName:  'Home'}) 
+          props.navigation.navigate('Home') 
         }
     };
     const [isMute,setMute] = useState(false)

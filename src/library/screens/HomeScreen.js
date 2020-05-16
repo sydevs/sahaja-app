@@ -28,7 +28,7 @@ const HomeScreen = props => {
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
                       console.log('going to choose meditation')
-                      props.navigation.navigate({ routeName:  'Meditation'}) 
+                      props.navigation.navigate('Meditation') 
                   }}>  
                       <View style={styles.meditationButton}>
                           <Text style={styles.meditationButtonText}>
@@ -43,7 +43,7 @@ const HomeScreen = props => {
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
                       console.log('going to FirstExperience')
-                      props.navigation.navigate({ routeName:  'FirstExperience', tabBarVisible: false}) 
+                      props.navigation.navigate('FirstExperience', {tabBarVisible: false}) 
                   }}>  
                       <View style={styles.repeatMeditationButton}>
                           <Text style={styles.repeatMeditationText}>

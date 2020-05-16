@@ -224,10 +224,10 @@ const LoadingScreen = props => {
             console.log('LoadingScreen->checkLaunchState:'+hasLaunched)
             if(hasLaunched == null){
                 console.log('going to first experience ...')
-                props.navigation.navigate({routeName: 'FirstExperience'});
+                props.navigation.navigate('FirstExperience');
             }else{
                 console.log('going to home screen ...')
-                props.navigation.navigate({routeName: 'Home'});
+                props.navigation.navigate('Home');
             }
         }
         checkLaunchState();
@@ -244,10 +244,10 @@ const LoadingScreen = props => {
         console.log('LoadingScreen->checkLaunchState:'+hasLaunched)
         if(hasLaunched == null){
             console.log('going to first experience ...')
-            props.navigation.navigate({routeName: 'FirstExperience'});
+            props.navigation.navigate('FirstExperience');
         }else{
             console.log('going to home screen ...')
-            props.navigation.navigate({routeName: 'Home'});
+            props.navigation.navigate('Home');
         }
     });
         

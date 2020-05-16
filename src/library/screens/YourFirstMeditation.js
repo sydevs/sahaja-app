@@ -60,7 +60,7 @@ const YourFirstMeditation = props => {
                     console.log('setting has launched')
                     AsyncStorage.setItem(HAS_LAUNCHED, 'true');
                     console.log('going to self realization')
-                    props.navigation.navigate({ routeName:  'SelfRealization'}) 
+                    props.navigation.navigate('SelfRealization') 
                 }}>  
                     <View style={styles.welcomeButton}>
                         <Text style={styles.welcomeButtonText}>

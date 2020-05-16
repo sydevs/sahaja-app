@@ -111,9 +111,11 @@ const Music  = props => {
         return (
                     <View style={styles.gridItems}>
                         <TouchableOpacity onPress={() => {
-                    props.navigation.navigate({
-                            routeName:  'MusicPlayer'
-                        })
+                    props.navigation.navigate(
+                            'MusicPlayer',
+                            {
+                                playlistId: itemData.item.id
+                            })
                     }}>
                         <View style={styles.meditationTypeImage}><SvgXml xml={itemData.item.imageData} width="100" height="100"/></View>
                         <Text style={styles.meditationTypeText} numberOfLines={2}>{itemData.item.title}</Text>
@@ -151,7 +153,7 @@ const Music  = props => {
 const styles = StyleSheet.create({
     screen : {
         flex: 1,
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
     gridItems: {
         padding: 20,

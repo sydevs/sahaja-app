@@ -4,14 +4,14 @@ import { Video } from 'expo-av';
 
 const { width, height } = Dimensions.get('window')
 const VideoPlayer  = props => {
-    const id = props.navigation.getParam('id');
-    const videoUrl = props.navigation.getParam('videoUrl');
+    const id = props.navigation.route.id;
+    const videoUrl = props.route.videoUrl;
     const [isMute,setMute] = useState(false)
     const _onPlaybackStatusUpdate = (playbackStatus) => {
         if (playbackStatus.didJustFinish){
           // The player has just finished playing and will stop.
           console.log('video finished, going to meditation screen ...')
-          props.navigation.navigate({ routeName:  'Meditation'}) 
+          props.navigation.navigate('Meditation') 
         }
     };
 

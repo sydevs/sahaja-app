@@ -11,14 +11,12 @@ const Meditation  = props => {
         return (
                     <View style={styles.gridItems}>
                         <TouchableOpacity onPress={() => {
-                    props.navigation.navigate({
-                            routeName:  'ChooseDuration',
-                            params: {
+                    props.navigation.navigate('ChooseDuration',
+                            {
                                 id: itemData.item.id,
                                 title: itemData.item.title,
                                 meditationCategories: itemData.item.meditationCategories
-                            }
-                        })
+                            })
                     }}>
                         <View style={styles.meditationTypeImage}><SvgXml xml={itemData.item.imageData} width="51" height="33"/></View>
                         <Text style={styles.meditationTypeText} numberOfLines={2}>{itemData.item.title}</Text>

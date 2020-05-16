@@ -6,16 +6,16 @@ import colors from '../../res/colors'
 
 const { width, height } = Dimensions.get('window')
 const ChooseDuration  = props => {
-    const meditationCategories = props.navigation.getParam('meditationCategories');
+    const meditationCategories = props.route.meditationCategories;
     const renderGridItems = (itemData) => {
         return (<TouchableOpacity onPress={() => {
-                    props.navigation.navigate({
-                            routeName:  'VideoPlayer',
-                            params: {
+                    props.navigation.navigate(
+                            'VideoPlayer',
+                            {
                                 id: itemData.item.id,
                                 videoUrl: itemData.item.videoUrl
                             }
-                        })
+                        )
                     }}>
                     <View style={styles.gridItems}>
                         <View style={styles.circleButton}>

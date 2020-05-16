@@ -27,7 +27,7 @@ const FirstExperience = props => {
                 <TouchableOpacity style={{alignItems:'center'}} 
                     onPress={() => {
                         console.log('going to your first meditation')
-                        props.navigation.navigate({ routeName:  'YourFirstMeditation'}) 
+                        props.navigation.navigate('YourFirstMeditation') 
                     }}> 
                         <View style={styles.welcomeButton}>
                             <Text style={styles.welcomeButtonText}>

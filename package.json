@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.6",
-    "@react-native-community/masked-view": "0.1.6",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.4.2",
+    "@react-navigation/native": "^5.3.0",
+    "@react-navigation/stack": "^5.3.3",
     "expo": "^35.0.0",
     "expo-asset": "^7.0.0",
     "expo-audioplayer": "peeomid/reactnative_expo_audioplayer#master",
@@ -27,17 +30,14 @@
     "react-native-material-design-styles": "0.2.7",
     "react-native-reanimated": "~1.2.0",
     "react-native-safe-area-context": "~0.3.6",
-    "react-native-screens": "1.0.0-alpha.23",
+    "react-native-screens": "~1.0.0-alpha.23",
     "react-native-slider": "^0.11.0",
     "react-native-svg": "9.9.5",
     "react-native-vector-icons": "6.6.0",
-    "react-native-web": "^0.11.7",
-    "react-navigation": "4.1.1",
-    "react-navigation-drawer": "2.3.4",
-    "react-navigation-stack": "2.1.1",
-    "react-navigation-tabs": "2.7.0"
+    "react-native-web": "^0.11.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
     "babel-preset-expo": "^7.1.0"
   },
   "private": true
