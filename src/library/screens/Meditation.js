@@ -87,23 +87,23 @@ const styles = StyleSheet.create({
     },
     titleText: {
         width: wp('83.945'),
-        height: hp('4.87%'),
+        height: hp('4.58%'),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: wp('7.29%'),
+        fontSize: wp('6%'),
         lineHeight: hp("4.58%"),
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B'
     },
     meditationTypeText: {
-        height: hp('2.29%'),
+        height: hp('3%'),
         fontFamily: 'raleway-regular',
         fontStyle: "normal",
         fontWeight: 'normal',
         fontSize: wp('4.13%'),
-        lineHeight: hp("2.17%"),
+        lineHeight: hp("2.8%"),
         color: "#555555",
         justifyContent: "center",
         textAlign: "center"

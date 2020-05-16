@@ -305,12 +305,12 @@ const styles = StyleSheet.create({
     welcomeMessage: {
         position: "absolute",
         width: wp("59.12%"),
-        height: hp("2.86%"),
+        height: hp("3.3%"),
         fontFamily: "raleway-regular",
         fontStyle: "normal",
         fontWeight: "normal",
         fontSize: wp("4.86%"),
-        lineHeight: hp("2.86%"),
+        lineHeight: hp("3%"),
         textAlign: "center",
         letterSpacing: 0.625,
         color: "#7B7B7B"

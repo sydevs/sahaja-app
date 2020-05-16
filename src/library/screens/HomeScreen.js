@@ -17,8 +17,8 @@ const HomeScreen = props => {
                       Welcome back
                   </Text>
               </View>
-              <View style={{height: hp('5%')}} />
-              <View style={{height: hp('2.8%'), alignItems:'center'}} >
+              <View style={{height: hp('2%')}} />
+              <View style={{height: hp('3%'), alignItems:'center'}} >
                   <Text style={styles.welcomeMessage}>
                       Let's get you meditating
                   </Text>
@@ -80,11 +80,11 @@ const styles = StyleSheet.create({
   welcomeMessage: {
     position: "absolute",
     width: wp('59%'),
-    height: hp('2.8%'),
+    height: hp('3%'),
     fontFamily: "raleway-regular",
     fontStyle: "normal",
     fontWeight: "normal",
-    fontSize: wp('4.8%'),
+    fontSize: wp('4.6%'),
     lineHeight: hp('2.8%'),
     textAlign: "center",
     letterSpacing: 0.625,
@@ -106,12 +106,12 @@ const styles = StyleSheet.create({
   },
   meditationButtonText: {
     width: wp('48.6%'), 
-    height: hp('2.1%'),
+    height: hp('3%'),
     fontFamily: "raleway-regular",
     fontStyle: "normal",
     fontWeight: "normal",
     fontSize: wp('3.89%'),
-    lineHeight: hp('2.17%'),
+    lineHeight: hp('2.8%'),
     textAlign: "center",
     letterSpacing: 0.2,
     color: "#7B7B7B",
@@ -128,12 +128,12 @@ meditationButton: {
     
 },
 repeatMeditationText: {
-  height:hp('1.83%'),
+  height:hp('3%'),
   fontFamily: 'raleway-regular',
   fontStyle:'normal',
   fontWeight:'normal',
   fontSize:wp('3.4%'),
-  lineHeight:hp('1.83%'),
+  lineHeight:hp('2.8%'),
   letterSpacing:0.96,
   color:"#707070",
   textAlign: 'center'

@@ -132,13 +132,13 @@ const Music  = props => {
                     Music for meditation
                 </Text>
             </View>
-            <View style={{height: hp('3.32%')}} />
-            <View style={{height: hp('2.86%'), alignItems:'center'}} >
+            <View style={{height: hp('2.5%')}} />
+            <View style={{height: hp('3%'), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     Choose your sound
                 </Text>
             </View>
-            <View style={{height: hp('10%')}} />
+            <View style={{height: hp('7%')}} />
             <View style={{ alignItems:'center'}} >
                 <FlatList keyExtractor={(item,index) => item.id} data={ musicData } renderItem= {renderGridItems} numColumns={2}/>    
             </View>
@@ -167,8 +167,8 @@ const styles = StyleSheet.create({
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: wp('7.25'),
-        lineHeight: hp('4.585'),
+        fontSize: wp('6%'),
+        lineHeight: hp('4.58%'),
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B'
@@ -176,23 +176,23 @@ const styles = StyleSheet.create({
     welcomeMessage: {
         position: "absolute",
         width: wp('59.12%'),
-        height: hp('2.86%'),
+        height: hp('3.2%'),
         fontFamily: "raleway-regular",
         fontStyle: "normal",
         fontWeight: "normal",
-        fontSize: wp('4.86%'),
-        lineHeight: hp('2.86%'),
+        fontSize: wp('4.5%'),
+        lineHeight: hp('3.2%'),
         textAlign: "center",
         letterSpacing: 0.625,
         color: "#7B7B7B"
     },
     meditationTypeText: {
-        height: hp('2.29%'),
+        height: hp('3%'),
         fontFamily: 'raleway-regular',
         fontStyle: "normal",
         fontWeight: 'normal',
         fontSize: wp('4.13%'),
-        lineHeight: hp('2.17%'),
+        lineHeight: hp('2.8s%'),
         color: "#555555",
         justifyContent: "center",
         textAlign: "center"

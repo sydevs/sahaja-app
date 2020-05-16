@@ -15,7 +15,7 @@ const FirstExperience = props => {
                 </Text>
             </View>
             <View style={{height: hp("5%")}} />
-            <View style={{height: hp("2.86%"), alignItems:'center'}} >
+            <View style={{height: hp("3%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     Let's get you meditating
                 </Text>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: 'normal',
         fontSize: wp("7.29%"),
-        lineHeight: 40,
+        lineHeight: hp("4.58%"),
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B'
@@ -69,12 +69,12 @@ const styles = StyleSheet.create({
     welcomeMessage: {
         position: "absolute",
         width: wp("59.12%"),
-        height: 25,
+        height: hp("3%"),
         fontFamily: "raleway-regular",
         fontStyle: "normal",
         fontWeight: "normal",
-        fontSize: wp("4.86%"),
-        lineHeight: 25,
+        fontSize: wp("4.5%"),
+        lineHeight: hp("3%"),
         textAlign: "center",
         letterSpacing: 0.625,
         color: "#7B7B7B"

@@ -84,31 +84,33 @@ const styles = StyleSheet.create({
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: wp('7.29%'),
+        fontSize: wp('6.8%'),
         lineHeight: hp("4.58%"),
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B'
     },
     durationText: {
-        height: hp("2.97%"),
+        height: hp("3%"),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'bold',
-        fontSize: wp('3.89%'),
-        lineHeight: hp("2.17%"),
+        fontSize: 20,
+        lineHeight: hp("3%"),
         color: "#7B7B7B",
         textAlign: 'center',
         justifyContent: 'center',
-        marginTop: hp("4.01%")
+        // marginTop: hp("4.01%")
     },
     circleButton:{
         flex:1,
-        height: wp('24%'),
-        width: wp('24%'),  //The Width must be the same as the height
-        borderRadius: wp('48%'), //Then Make the Border Radius twice the size of width or Height   
+        height: 100,
+        width: 100,  //The Width must be the same as the height
+        borderRadius: 200, //Then Make the Border Radius twice the size of width or Height   
         borderWidth: 1,
-        borderColor: '#555555'
+        borderColor: '#555555',
+        justifyContent: 'center',
+        alignItems: 'center'
       }
 });
 
