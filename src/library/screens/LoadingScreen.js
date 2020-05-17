@@ -3,6 +3,8 @@ import {StyleSheet,View,Text,AsyncStorage,Dimensions} from 'react-native';
 import { SvgXml } from "react-native-svg";
 const HAS_LAUNCHED = 'hasLaunched';
 const { width, height } = Dimensions.get('window')
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 
 const lotusImageData = `<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
@@ -256,18 +258,18 @@ const LoadingScreen = props => {
     return (
     <View style={styles.screen}>
         <View style={styles.meditationTypeImage}><SvgXml xml={lotusImageData} width= {width * 0.3} height= { width * 0.3}/></View>
-        <View style={{ height: height * 0.02}} />
-        <View style={{height: 40,alignItems:'center'}} >
+        <View style={{ height: hp("2%")}} />
+        <View style={{height: hp("4.58%"),alignItems:'center'}} >
             <Text style={styles.welcome}>
                 We Meditate
             </Text>
-            <View style={{height: height*0.02}} />
-            <View style={{height: 30, alignItems:'center'}} >
+            <View style={{height: hp("2%")}} />
+            <View style={{height: hp("3.44%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     Guided meditations 
                 </Text>
             </View>
-            <View style={{height: 30, alignItems:'center'}} >
+            <View style={{height: hp("3.44%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     for better life
                 </Text>
@@ -288,27 +290,27 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     welcome: {
-        width: 345,
-        height: 80,
+        width: wp("83.94%"),
+        height: hp("9.17"),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 30,
-        lineHeight: 40,
+        fontSize: wp("7.29%"),
+        lineHeight: hp("4.58%"),
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B',
-        top: 20
+        top: hp("2.29%")
     },
     welcomeMessage: {
         position: "absolute",
-        width: 243,
-        height: 25,
+        width: wp("59.12%"),
+        height: hp("2.86%"),
         fontFamily: "raleway-regular",
         fontStyle: "normal",
         fontWeight: "normal",
-        fontSize: 20,
-        lineHeight: 25,
+        fontSize: wp("4.86%"),
+        lineHeight: hp("2.86%"),
         textAlign: "center",
         letterSpacing: 0.625,
         color: "#7B7B7B"

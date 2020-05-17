@@ -42,7 +42,7 @@ const bottomTabNavigator = createBottomTabNavigator({
       tabBarIcon: (tabInfo) => {
         return <HomeIcon/>
       },
-      tabBarVisible: true
+      tabBarVisible: false
     }
   },
   Meditate : {

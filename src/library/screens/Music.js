@@ -2,6 +2,7 @@ import React from 'react';
 import {View , Text, StyleSheet, Dimensions,FlatList,TouchableOpacity} from 'react-native';
 import { SvgXml } from "react-native-svg";
 import R from '../../res/R';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const { width, height } = Dimensions.get('window')
 const Music  = props => {
@@ -125,19 +126,19 @@ const Music  = props => {
 
     return (
         <View style={styles.screen}>
-           <View style={{ height: height * 0.16}} />
-            <View style={{height: 40,alignItems:'center'}} >
+           <View style={{ height: hp('16%')}} />
+            <View style={{height: hp('4.58%'),alignItems:'center'}} >
                 <Text style={styles.welcome}>
                     Music for meditation
                 </Text>
             </View>
-            <View style={{height: 29}} />
-            <View style={{height: 25, alignItems:'center'}} >
+            <View style={{height: hp('3.32%')}} />
+            <View style={{height: hp('2.86%'), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     Choose your sound
                 </Text>
             </View>
-            <View style={{height: height * 0.1}} />
+            <View style={{height: hp('10%')}} />
             <View style={{ alignItems:'center'}} >
                 <FlatList keyExtractor={(item,index) => item.id} data={ musicData } renderItem= {renderGridItems} numColumns={2}/>    
             </View>
@@ -156,49 +157,49 @@ const styles = StyleSheet.create({
     gridItems: {
         padding: 20,
         marginVertical: 8,
-        width: width*0.5,
+        width: wp('50%'),
         justifyContent: 'center',
         flexDirection: "column"
     },
     welcome: {
-        width: 345,
-        height: 40,
+        width: wp('83.94%'),
+        height: hp('4.58%'),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
-        fontSize: 30,
-        lineHeight: 40,
+        fontSize: wp('7.25'),
+        lineHeight: hp('4.585'),
         textAlign: "center",
         letterSpacing: 0.8,
         color: '#7B7B7B'
     },
     welcomeMessage: {
         position: "absolute",
-        width: 243,
-        height: 25,
+        width: wp('59.12%'),
+        height: hp('2.86%'),
         fontFamily: "raleway-regular",
         fontStyle: "normal",
         fontWeight: "normal",
-        fontSize: 20,
-        lineHeight: 25,
+        fontSize: wp('4.86%'),
+        lineHeight: hp('2.86%'),
         textAlign: "center",
         letterSpacing: 0.625,
         color: "#7B7B7B"
     },
     meditationTypeText: {
-        height: 20,
+        height: hp('2.29%'),
         fontFamily: 'raleway-regular',
         fontStyle: "normal",
         fontWeight: 'normal',
-        fontSize: 17,
-        lineHeight: 20,
+        fontSize: wp('4.13%'),
+        lineHeight: hp('2.17%'),
         color: "#555555",
         justifyContent: "center",
         textAlign: "center"
       },
       meditationTypeImage: {
         alignItems: "center",
-        marginBottom: 10
+        marginBottom: hp('1.14s%')
       }
 });
 

@@ -30,7 +30,6 @@ export default class App extends Component {
   render() {
     console.log('In render()')
     Amplify.configure(awsconfig);
-    //Analytics.configure({ disabled: true })
     Analytics.record({ name: "App Started!" })
     if (this.state.fontsLoaded) {
       return  <AppNavigator/>;

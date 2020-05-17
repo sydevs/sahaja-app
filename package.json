@@ -29,6 +29,7 @@
     "react-native-material-design": "0.3.7",
     "react-native-material-design-styles": "0.2.7",
     "react-native-reanimated": "~1.2.0",
+    "react-native-responsive-screen": "^1.4.1",
     "react-native-safe-area-context": "~0.3.6",
     "react-native-screens": "1.0.0-alpha.23",
     "react-native-slider": "^0.11.0",

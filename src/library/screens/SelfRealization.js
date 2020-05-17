@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import {View , StyleSheet, Dimensions} from 'react-native'
 import { Video } from 'expo-av';
-import Amplify, {Analytics} from 'aws-amplify';
+import  {Analytics} from 'aws-amplify';
 
 const { width, height } = Dimensions.get('window')
 const SelfRealization  = props => {
