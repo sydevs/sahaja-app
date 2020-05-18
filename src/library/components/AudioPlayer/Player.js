@@ -80,8 +80,11 @@ class Player extends Component {
       const soundObject = new Audio.Sound();
       soundObject.setOnPlaybackStatusUpdate(this.onPlaybackStatusUpdate);
       console.log('about to load async');
-      const { sound, status } = await soundObject.loadAsync(source, initialStatus, false);
       this.playbackInstance = soundObject;
+      console.log('instance after assing: ', this.playbackInstance);
+      // const { sound, status } = await soundObject.loadAsync(source, initialStatus, false);
+      const { sound, status } = await this.playbackInstance.loadAsync(source, initialStatus, false);
+      // this.playbackInstance = sound;
 
       console.log('loaded');
       console.log('status: ', status);
@@ -118,6 +121,7 @@ class Player extends Component {
   onPlaybackStatusUpdate = status => {
     console.log('status updated');
     console.log(status);
+    console.log('instance: ', this.playbackInstance);
     if (status.isLoaded) {
       this.setState({
         playbackInstancePosition: status.positionMillis,
@@ -176,28 +180,31 @@ class Player extends Component {
     // console.log(this.playbackInstance);
 
     if (this.playbackInstance != null) {
-      // const status = this.playbackInstance.getStatusAsync()
-      // if (!status.isLoaded) {
-      //   const currentIndex = this.props.currentIndex;
-      //   const { isPlaying, volume } = this.state;
-      //   const initialStatus = {
-      //     shouldPlay: isPlaying,
-      //     volume
-      //   }
+      const status = await this.playbackInstance.getStatusAsync()
+      console.log('status in play: ', status);
+      if (!status.isLoaded) {
+        const currentIndex = this.props.currentIndex;
+        const { isPlaying, volume } = this.state;
+        const initialStatus = {
+          shouldPlay: isPlaying,
+          volume
+        }
 
-      //   const source = { uri: this.props.tracks[currentIndex].audioUrl }
-      //   this.playbackInstance.loadAsync(source, initialStatus, false)
-      // }
+        const source = { uri: this.props.tracks[currentIndex].audioUrl }
+        this.playbackInstance.loadAsync(source, initialStatus, false)
+      }
 
       
       if (this.state.isPlaying) {
+        console.log('is playing')
         this.playbackInstance.pauseAsync();
       } else {
+        console.log('is NOT playing')
         this.playbackInstance.playAsync();
       }
     } else {
       console.log('before play load');
-      this.loadNewPlaybackInstance(false);
+      this.loadNewPlaybackInstance(true);
       console.log('after play load');
     }
 
@@ -231,7 +238,7 @@ class Player extends Component {
         playThroughEarpieceAndroid: true
       })
 
-      // this.loadNewPlaybackInstance(false);
+      this.loadNewPlaybackInstance(false);
     } catch (e) {
       console.log(e)
     }

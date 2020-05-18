@@ -339,7 +339,7 @@ export default function MusicPlayer({ route, navigation }) {
             title: currentSong.name,
             subtitle: 'By ' + currentSong.artists[0].name,
             albumArtUrl: currentSong.cover_art_url,
-            audioUrl: currentSong.url,
+            audioUrl: encodeURI(currentSong.url),
             duration: currentSong.duration
           });
         }
