@@ -3,6 +3,9 @@ import {View , Text, StyleSheet, Dimensions,FlatList,TouchableOpacity} from 'rea
 import { SvgXml } from "react-native-svg";
 import R from '../../res/R';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import MeditateIcon from '../../res/svgs/Meditate'
+import MusicIcon from '../../res/svgs/Music'
+
 
 const { width, height } = Dimensions.get('window')
 const Music  = props => {
@@ -126,22 +129,45 @@ const Music  = props => {
 
     return (
         <View style={styles.screen}>
-           <View style={{ height: hp('16%')}} />
+           <View style={{ height: hp('11.84%')}} />
             <View style={{height: hp('4.58%'),alignItems:'center'}} >
                 <Text style={styles.welcome}>
                     Music for meditation
                 </Text>
             </View>
-            <View style={{height: hp('3.32%')}} />
+            <View style={{height: hp('4.35%')}} />
             <View style={{height: hp('2.86%'), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     Choose your sound
                 </Text>
             </View>
-            <View style={{height: hp('10%')}} />
+            <View style={{height: hp('4.35%')}} />
             <View style={{ alignItems:'center'}} >
                 <FlatList keyExtractor={(item,index) => item.id} data={ musicData } renderItem= {renderGridItems} numColumns={2}/>    
             </View>
+            <View style={{height: hp('7.30%')}} />
+            <View style={styles.bottomTab}>
+                  <View style={styles.bottomTabColumn}>
+                    <TouchableOpacity style={{alignItems:'center'}}
+                      onPress={() => {
+                          console.log('going to choose meditation')
+                          props.navigation.navigate({ routeName:  'Meditation'}) 
+                      }}> 
+                        <MeditateIcon></MeditateIcon>
+                        <Text style={styles.labelStyle}>Meditate</Text>
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.bottomTabColumn}>
+                  <TouchableOpacity style={{alignItems:'center'}}
+                      onPress={() => {
+                          console.log('going to choose music')
+                          props.navigation.navigate({ routeName:  'Music'}) 
+                      }}> 
+                        <MusicIcon></MusicIcon>
+                        <Text style={styles.labelStyle}>Music</Text>
+                    </TouchableOpacity>
+                  </View>
+              </View>
             
             
        </View>
@@ -200,7 +226,31 @@ const styles = StyleSheet.create({
       meditationTypeImage: {
         alignItems: "center",
         marginBottom: hp('1.14s%')
-      }
+      },
+        bottomTab: {
+        height: hp('11%'),
+        bottom: 0,
+        width: width,
+        borderTopColor: '#D8D8D8',
+        borderColor: 'white',
+        borderWidth: 1,
+        justifyContent: 'flex-end',
+        flex: 1,
+        flexDirection: 'row'
+        },
+        bottomTabColumn: {
+        alignContent: 'center',
+        flexDirection: 'column',
+        width: wp('50%'),
+        alignItems: 'center',
+        top: hp('1.2%')
+        },
+        labelStyle: {
+        fontSize: 15,
+        fontFamily: 'raleway-regular',
+        fontStyle: "normal",
+        color: '#7B7B7B'
+        }
 });
 
 export default Music; 

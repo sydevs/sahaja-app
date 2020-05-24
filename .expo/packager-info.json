@@ -1,10 +1,10 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 8284,
-  "expoServerNgrokUrl": "https://8w-74h.abhijeetnaikare.sahaja-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.8w-74h.abhijeetnaikare.sahaja-app.exp.direct",
-  "ngrokPid": 8396,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "devToolsPort": 19002,
   "webpackServerPort": null
 }

@@ -90,9 +90,9 @@ const styles = StyleSheet.create({
     welcomeButtonText: {
         width: wp("57.42%"), 
         height: hp("3%"),
-        fontFamily: "raleway-regular",
+        fontFamily: "raleway-bold",
         fontStyle: "normal",
-        fontWeight: "normal",
+        fontWeight: "bold",
         fontSize: wp("3.89%"),
         lineHeight: hp('3%'),
         textAlign: "center",

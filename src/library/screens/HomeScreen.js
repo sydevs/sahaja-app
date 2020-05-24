@@ -2,6 +2,9 @@ import React,{ Component } from 'react';
 import { StyleSheet, Text, View, Image, Button,TouchableOpacity,Dimensions } from 'react-native';
 import HomeBackground from '../../res/svgs/HomeBackground'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import MeditateIcon from '../../res/svgs/Meditate'
+import MusicIcon from '../../res/svgs/Music'
+
 
 const { width, height } = Dimensions.get('window')
 const HomeScreen = props => {
@@ -11,20 +14,20 @@ const HomeScreen = props => {
               <HomeBackground ></HomeBackground>
             </View>
             <View style={styles.front}>
-              <View style={{ height: hp('16%')}} />
-              <View style={{height: hp('4.5%'),alignItems:'center'}} >
+              <View style={{ height: hp('9.6%')}} />
+              <View style={{height: hp('6%'),alignItems:'center'}} >
                   <Text style={styles.welcomeBack}>
                       Welcome back
                   </Text>
               </View>
-              <View style={{height: hp('5%')}} />
-              <View style={{height: hp('2.8%'), alignItems:'center'}} >
+              <View style={{height: hp('3.45%')}} />
+              <View style={{height: hp('3.75%'), alignItems:'center'}} >
                   <Text style={styles.welcomeMessage}>
                       Let's get you meditating
                   </Text>
               </View>
-              <View style={{height: hp('40%') }} />
-              <View style={{height: hp('7.45%'), alignItems:'center'}} >
+              <View style={{height: hp('42.58%') }} />
+              <View style={{height: hp('9.75%'), alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
                       console.log('going to choose meditation')
@@ -38,7 +41,7 @@ const HomeScreen = props => {
                       </View>   
                   </TouchableOpacity>
               </View>
-              <View style={{height: hp('2%')}} />
+              <View style={{height: hp('4.2%')}} />
               <View style={{height: hp('7.5%'), alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
@@ -52,6 +55,29 @@ const HomeScreen = props => {
                       </View>   
                   </TouchableOpacity>
               </View>
+              <View style={{height: hp('2.8%')}} />
+              <View style={styles.bottomTab}>
+                  <View style={styles.bottomTabColumn}>
+                    <TouchableOpacity style={{alignItems:'center'}}
+                      onPress={() => {
+                          console.log('going to choose meditation')
+                          props.navigation.navigate({ routeName:  'Meditation'}) 
+                      }}> 
+                        <MeditateIcon></MeditateIcon>
+                        <Text style={styles.labelStyle}>Meditate</Text>
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.bottomTabColumn}>
+                  <TouchableOpacity style={{alignItems:'center'}}
+                      onPress={() => {
+                          console.log('going to choose music')
+                          props.navigation.navigate({ routeName:  'Music'}) 
+                      }}> 
+                        <MusicIcon></MusicIcon>
+                        <Text style={styles.labelStyle}>Music</Text>
+                    </TouchableOpacity>
+                  </View>
+              </View>
             </View>
             
           </View>
@@ -62,10 +88,11 @@ const HomeScreen = props => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    backgroundColor: 'white'
   },
   welcomeBack: {
-    width: wp('83.9%'),
+    width: wp('92.0%'),
     height: hp('4.5%'),
     fontFamily: 'raleway-regular',
     fontStyle: 'normal',
@@ -92,11 +119,11 @@ const styles = StyleSheet.create({
   },
   background: {
     flex: 1,
-    zIndex: 0
+    //zIndex: 0
   },
   front:{
     position: 'absolute',
-    zIndex: 2,
+    //zIndex: 1,
     flex: 1,
     alignItems: 'center',
     right: 0,
@@ -107,7 +134,7 @@ const styles = StyleSheet.create({
   meditationButtonText: {
     width: wp('48.6%'), 
     height: hp('2.1%'),
-    fontFamily: "raleway-regular",
+    fontFamily: "raleway-bold",
     fontStyle: "normal",
     fontWeight: "normal",
     fontSize: wp('3.89%'),
@@ -120,15 +147,16 @@ const styles = StyleSheet.create({
 meditationButton: {
     borderWidth: 1,
     width: wp('60.34%'),
-    height: hp('7.45%'),
+    height: hp('9.75%'),
     borderColor: '#979797',
     justifyContent: 'center',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: 'white'
     
 },
 repeatMeditationText: {
-  height:hp('1.83%'),
+  height:hp('2.4%'),
   fontFamily: 'raleway-regular',
   fontStyle:'normal',
   fontWeight:'normal',
@@ -143,6 +171,30 @@ repeatMeditationButton: {
   borderBottomWidth: 1,
   borderBottomColor: '#E1DEDE',
   alignItems: 'center'
+},
+bottomTab: {
+  height: hp('10.94%'),
+  bottom: 0,
+  width: width,
+  borderTopColor: '#D8D8D8',
+  borderColor: 'white',
+  borderWidth: 1,
+  justifyContent: 'flex-end',
+  flex: 1,
+  flexDirection: 'row'
+},
+bottomTabColumn: {
+  alignContent: 'center',
+  flexDirection: 'column',
+  width: wp('50%'),
+  alignItems: 'center',
+  top: hp('1.2%')
+},
+labelStyle: {
+  fontSize: 15,
+  fontFamily: 'raleway-regular',
+  fontStyle: "normal",
+  color: '#7B7B7B'
 }
 });
 

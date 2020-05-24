@@ -5,6 +5,7 @@ import { MEDITATIONS } from '../../../data/meditationData'
 import { SvgXml } from "react-native-svg";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import  {Analytics} from 'aws-amplify';
+import BackArrow from '../../res/svgs/BackArrow'
 
 const { width, height } = Dimensions.get('window')
 const Meditation  = props => {
@@ -28,7 +29,7 @@ const Meditation  = props => {
                                     }
                                 })
                     }}>
-                        <View style={styles.meditationTypeImage}><SvgXml xml={itemData.item.imageData} width={wp("12.4%")} height={hp("3.82%")}/></View>
+                        <View style={styles.meditationTypeImage}><SvgXml xml={itemData.item.imageData} width={wp("13.87%")} height={hp("7.8%")}/></View>
                         <Text style={styles.meditationTypeText} numberOfLines={2}>{itemData.item.title}</Text>
                         </TouchableOpacity>
                    </View>
@@ -37,18 +38,30 @@ const Meditation  = props => {
     };
     return (
          <View style={styles.screen}>
-             <View style={{ height: hp("10.32%")}} />
-             <View style={{height: hp("4.58%"),alignItems:'center'}} >
+             <View style={{ height: hp("5.85%")}} />
+             <View style={{ height: hp("5.55%"),alignSelf:'flex-start',left: wp('2%')}} >
+                <TouchableOpacity onPress={() => {
+                    props.navigation.navigate({
+                        routeName:  'Home'
+                    })
+                }}>
+                    <View style={styles.circleButton}>
+                                <BackArrow></BackArrow>
+                    </View>
+                </TouchableOpacity>
+             </View>
+             <View style={{ height: hp("2.1%")}} />
+             <View style={{height: hp("6%"),alignItems:'center'}} >
                 <Text style={styles.titleText}>
                     How do you 
                 </Text>
             </View>
-            <View style={{height: hp("4.58%"),alignItems:'center'}} >
+            <View style={{height: hp("6%"),alignItems:'center'}} >
                 <Text style={styles.titleText}>
                     wish to feel ?
                 </Text>
             </View>
-            <View style={{ height: hp("3.44%")}} />
+            <View style={{ height: hp("3.57%")}} />
              <FlatList 
              keyExtractor={(item,index) => item.id} 
              data={ MEDITATIONS } 
@@ -69,8 +82,16 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        backgroundColor: 'white'
     },
+    circleButton:{
+        flex:1,
+        height: hp('5.55%'),
+        width: hp('5.55%'),  //The Width must be the same as the height
+        borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height 
+        backgroundColor: '#D3D3D3'
+      },
     gridItems: {
         padding: wp('4.86%'),
         marginVertical: hp('0.9%'),
@@ -104,15 +125,16 @@ const styles = StyleSheet.create({
         color: '#7B7B7B'
     },
     meditationTypeText: {
-        height: hp('2.29%'),
+        height: hp('2.55%'),
         fontFamily: 'raleway-regular',
         fontStyle: "normal",
         fontWeight: 'normal',
-        fontSize: wp('4.13%'),
-        lineHeight: hp("2.17%"),
+        fontSize: hp('2.55%'),
+        lineHeight: hp("2.65%"),
         color: "#555555",
         justifyContent: "center",
-        textAlign: "center"
+        textAlign: "center",
+        top: hp('1.93%')
       },
       meditationTypeImage: {
         alignItems: "center",

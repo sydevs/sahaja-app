@@ -223,143 +223,143 @@ const confidentImage = `<svg width="32px" height="36px" viewBox="0 0 32 36" vers
 export const MEDITATIONS = [
     new Meditation('satisfied','Satisfied',satisfiedImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/357099012.sd.mp4?s=d77a9c1f67da26c930927ba1ccbd60ba83c308f0&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/356946608.sd.mp4?s=8cd3cd5c20476657a6fb9f83422438bcbdcf7580&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/357112897.sd.mp4?s=5c5e65a247f4057d85b728304ba7ab3c8fc616a5&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('calm','Calm',calmImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/357086095.sd.mp4?s=8f4005b10362e2747efc933c2d66cb30c3c4f136&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/350998913.sd.mp4?s=7545096af47869d475863fbf7b9e6e846127ff30&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/357079761.sd.mp4?s=c8d6c2269ec07745e3af20b085666cf7003e1e5e&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
     //  new Meditation('confident','Confident',confidentImage,
     //     [
-    //         new MeditationCategory('5mins',
+    //         new MeditationCategory('5 min',
     //             'https://player.vimeo.com/external/349135703.hd.mp4?s=c0b2d9e10886cdacf541a8d80ba48f1ac7c387b6&profile_id=175&oauth2_token_id=1254753263'),
-    //         new MeditationCategory('10mins',
+    //         new MeditationCategory('10 min',
     //             'https://player.vimeo.com/external/349136289.hd.mp4?s=42273715d49b899187a0e446599ba72dce7f0f0a&profile_id=175&oauth2_token_id=1254753263'),
-    //         new MeditationCategory('15mins',
+    //         new MeditationCategory('15 min',
     //             'https://player.vimeo.com/external/349137086.hd.mp4?s=486ff7cf482df72dec97c91b46541c569cb9fb5b&profile_id=175&oauth2_token_id=1254753263')
     //     ]
     
     //  ),
      new Meditation('creative','Creative',creativeImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/365033104.sd.mp4?s=cf1e297c7c3d3db4162acec492fd4f1ecd20fa48&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/355694227.sd.mp4?s=4077e907871e9de3a14233e93a496094fa94ab35&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/365087931.sd.mp4?s=aa28f58d2664742e7b8c355c36227939e6ecaa4b&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('focused','Focused',focusedImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/349131901.sd.mp4?s=b1aeee145f81f921a71346a1c4191856a2f4643d&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/349132384.sd.mp4?s=fc3b412dec708155edd4c1bb599dc3a9186db641&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/349133442.sd.mp4?s=fd4ad18f6206fa4ab0a81d907c1212c0cfedc54d&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('joyful','Joyful',joyfulImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/349134366.sd.mp4?s=45b86c4b08975d88baa6961ada6cfdbbebab201d&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/349134881.sd.mp4?s=5b72da3648e2d8cfc27a9a1903742844cdea1132&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/349135460.sd.mp4?s=1df7ac7c3aaf4441236e7a2faf3f3831c108fa3c&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('love','Love',loveImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/349131901.sd.mp4?s=b1aeee145f81f921a71346a1c4191856a2f4643d&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/349132384.sd.mp4?s=fc3b412dec708155edd4c1bb599dc3a9186db641&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/349135460.sd.mp4?s=1df7ac7c3aaf4441236e7a2faf3f3831c108fa3c&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('selfEsteem','SelfEsteem',selfEsteemImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/349136018.sd.mp4?s=22f1524516d95db667fe870ba4b6a93e5ce5e1d1&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/349136757.sd.mp4?s=a8bb692b46cd234872526ad2642a2bf98e8e2c78&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/349137791.sd.mp4?s=301c5b26dbacb537c5095be387bb2b2676b1f299&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('humble','Humble',humbleImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/349134143.sd.mp4?s=496c601490977260fe32fd5f395b2d3f240ed59f&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/357229013.sd.mp4?s=df8d45c727d5831d92f8c5a823bfe0fc01858621&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/357429209.sd.mp4?s=5ae6b41bf067f0bd703994646816a205de5f5e50&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('silence','Silence',silenceImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/356719763.sd.mp4?s=2cb56f238246fd5a217c67cf32b1519cce51e313&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/356720862.sd.mp4?s=fad09f37003ee0247a12d99c30f010d214e9a643&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/356870031.sd.mp4?s=5eddbc15b0e6e0535f43dd1a59928563a04dde70&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('harmony','Harmony',harmonyImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/357087232.sd.mp4?s=620842b783f67e40eecf799180f655deb22b711f&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/356870031.sd.mp4?s=5eddbc15b0e6e0535f43dd1a59928563a04dde70&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/350999837.sd.mp4?s=17c799832d3fafa33d2d44a4bf5f27532142b989&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('balanced','Balanced',balancedImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/349130643.sd.mp4?s=e9b26032334e77a9d04c4b35e10b333681ab6239&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/349130643.sd.mp4?s=e9b26032334e77a9d04c4b35e10b333681ab6239&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/349131369.sd.mp4?s=5f8c057cb9924a0e01edbdaa6c39b6e92f6f2d04&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     
      ),
      new Meditation('fulfilled','Fulfilled',fulfilledImage,
         [
-            new MeditationCategory('5mins',
+            new MeditationCategory('5 min',
                 'https://player.vimeo.com/external/350550502.sd.mp4?s=a36010f05b01e1dd6bc0cffd605be92f9f28d895&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('10mins',
+            new MeditationCategory('10 min',
                 'https://player.vimeo.com/external/350554884.sd.mp4?s=1b435efb453f4858dd5b48bca4445188b3600d0c&amp;profile_id=165&amp;oauth2_token_id=1254753263'),
-            new MeditationCategory('15mins',
+            new MeditationCategory('15 min',
                 'https://player.vimeo.com/external/350554962.sd.mp4?s=95c1bf27118ce615be46d0b00495a4ecf18d1472&amp;profile_id=165&amp;oauth2_token_id=1254753263')
         ]
     

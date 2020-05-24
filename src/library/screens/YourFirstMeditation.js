@@ -10,36 +10,78 @@ const YourFirstMeditation = props => {
     
     return (
         <View style={styles.screen}>
-            <View style={{ height: hp("16%")}} />
+            <View style={{ height: hp("12.44%")}} />
             <View>
-                <View style={{height: hp("9.17%"),flex: 1,zIndex: 0,width: wp("30%"),left: wp("10%")}}>
+                <View style={{height: hp("16.04%"),flex: 1,zIndex: 0,width: wp("50%"),left: wp("2.4%")}}>
                     <LinearGradient
                             colors={['#FFFFFF','#EBF4F3']}
                             start={{ x: 0, y: 1 }}
                             end={{ x: 1, y: 1 }}
-                            style={{ height: hp("9.17%") }}/>
+                            style={{ height: hp("16.04%") }}/>
                 </View>
-                <View style={{height: hp("9.17%"),alignItems:'center',zIndex: 1,position: 'absolute',right: 0,left: 0}} >
+                <View style={{height: hp("16.04%"),alignItems:'center',zIndex: 1,position: 'absolute',right: 0,left: 0}} >
                     
-                        <Text style={styles.welcome}>
-                            Your first meditation
+                        <Text style={styles.welcome1}>
+                            Your first
+                        </Text>
+                        <Text style={styles.welcome2}>
+                            meditation
                         </Text>
                     
                 </View>
             </View>
-            <View style={{height: hp("20%")}} />
-            <View style={{height: hp("3.5%"), alignItems:'center'}} >
-                <Text style={styles.welcomeMessage}>
-                    1. Find a quite place, 
-                </Text>
+            <View style={{height: hp("25%")}} />
+            <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'column',width:wp('20%'),left:wp('10%'),top: hp('2%')}}>
+                    <View style={{alignItems: 'center',alignContent: 'flex-end'}}>
+                        <Text style={styles.welcomeMessageNumber}>
+                            1.
+                        </Text>
+                    </View>
+                </View>
+                <View style={{flexDirection: 'column',width:wp('70%')}}>
+                    <View style={{height: hp("3.5%"), alignItems:'center'}} >
+                        <Text style={styles.welcomeMessage}>
+                            Find a quite place, 
+                        </Text>
+                    </View>
+                    <View style={{height: hp("2.86%"), alignItems:'center'}} >
+                        <Text style={styles.welcomeMessage}>
+                            sit back and relax
+                        </Text>
+                    </View>
+                </View>
             </View>
-            <View style={{height: hp("2.86%"), alignItems:'center'}} >
-                <Text style={styles.welcomeMessage}>
-                     sit back and relax
-                </Text>
+           
+            <View style={{height: hp("6.6%")}} />
+            <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'column',width:wp('20%'),left:wp('10%'),top: hp('2%')}}>
+                    <View style={{alignItems: 'center',alignContent: 'flex-end'}}>
+                        <Text style={styles.welcomeMessageNumber}>
+                            2.
+                        </Text>
+                    </View>
+                </View>
+                <View style={{flexDirection: 'column',width:wp('70%')}}>
+                    <View style={{height: hp("3.5%"), alignItems:'center'}} >
+                        <Text style={styles.welcomeMessage}>
+                        It will only take 9 
+                        </Text>
+                    </View>
+                    <View style={{height: hp("2.86%"), alignItems:'center'}} >
+                        <Text style={styles.welcomeMessage}>
+                        minutes and will literally change your life
+                        </Text>
+                    </View>
+                    <View style={{height: hp("2.86%"), alignItems:'center'}} >
+                        <Text style={styles.welcomeMessage}>
+                        change your life
+                        </Text>
+                    </View>
+                </View>
             </View>
-            <View style={{height: hp("10%")}} />
-            <View style={{height: hp("2.86%"), alignItems:'center'}} >
+
+            {/* <View style={{height: hp("2.86%"), alignItems:'center'}} >
                 <Text style={styles.welcomeMessage}>
                     2. It will only take 9 
                 </Text>
@@ -53,9 +95,9 @@ const YourFirstMeditation = props => {
                 <Text style={styles.welcomeMessage}>
                     change your life
                 </Text>
-            </View>
-            <View style={{height: hp("12%")}} />
-            <View style={{height: hp("7.45%"), alignItems:'center'}} >
+            </View> */}
+            <View style={{height: hp("15.44%")}} />
+            <View style={{height: hp("9.75%"), alignItems:'center'}} >
                 <TouchableOpacity style={{alignItems:'center'}}
                 onPress={() => {
                     console.log('setting has launched')
@@ -87,9 +129,9 @@ const styles = StyleSheet.create({
         borderWidth: wp("0.48%"),
         borderColor: '#979797'
     },
-    welcome: {
+    welcome1: {
         width: wp("83.94%"),
-        height: hp("9.17%"),
+        height: hp("7.17%"),
         fontFamily: 'raleway-regular',
         fontStyle: 'normal',
         fontWeight: 'normal',
@@ -100,6 +142,19 @@ const styles = StyleSheet.create({
         color: '#7B7B7B',
         top: hp("2.29%")
     },
+    welcome2: {
+        width: wp("83.94%"),
+        //height: hp("9.17%"),
+        fontFamily: 'raleway-regular',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontSize: wp("7.299%"),
+        lineHeight: 40,
+        textAlign: "center",
+        letterSpacing: 0.8,
+        color: '#7B7B7B',
+        //top: hp("2.29%")
+    },
     welcomeMessage: {
         position: "absolute",
         width: wp("59.12%"),
@@ -108,6 +163,19 @@ const styles = StyleSheet.create({
         fontStyle: "normal",
         fontWeight: "normal",
         fontSize: wp("4.86%"),
+        lineHeight: hp("2.74%"),
+        textAlign: "center",
+        letterSpacing: 0.625,
+        color: "#7B7B7B"
+    },
+    welcomeMessageNumber: {
+        position: "absolute",
+        width: wp("59.12%"),
+        height: hp("2.86%"),
+        fontFamily: "raleway-bold",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: 22,
         lineHeight: hp("2.74%"),
         textAlign: "center",
         letterSpacing: 0.625,
@@ -123,9 +191,9 @@ const styles = StyleSheet.create({
     welcomeButtonText: {
         width: wp("48.66%"), 
         height: hp("2.17%"),
-        fontFamily: "raleway-regular",
+        fontFamily: "raleway-bold",
         fontStyle: "normal",
-        fontWeight: "normal",
+        fontWeight: "bold",
         fontSize: wp("3.86%"),
         lineHeight: hp("2.17%"),
         textAlign: "center",
@@ -139,7 +207,7 @@ const styles = StyleSheet.create({
     welcomeButton: {
         borderWidth: 1,
         width: wp("57.42%"),
-        height: hp("7.45%"),
+        height: hp("9.75%"),
         borderColor: '#979797',
         justifyContent: 'center',
         flexDirection: 'row',

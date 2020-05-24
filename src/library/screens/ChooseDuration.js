@@ -2,7 +2,8 @@ import React from 'react';
 import {View , Text, StyleSheet, Dimensions, TouchableOpacity} from 'react-native'
 import { FlatList } from 'react-native-gesture-handler';
 import colors from '../../res/colors'
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'
+import BackArrow from '../../res/svgs/BackArrow'
 
 const { width, height } = Dimensions.get('window')
 const ChooseDuration  = props => {
@@ -28,18 +29,30 @@ const ChooseDuration  = props => {
     };
     return (
          <View style={styles.screen}>
-             <View style={{ height: hp("15%")}} />
-             <View style={{height: hp("4.58%"),alignItems:'center'}} >
+             <View style={{ height: hp("5.85%")}} />
+             <View style={{ height: hp("5.55%"),alignSelf:'flex-start',left: wp('2%')}} >
+                <TouchableOpacity onPress={() => {
+                    props.navigation.navigate({
+                        routeName:  'Meditation'
+                    })
+                }}>
+                    <View style={styles.circleButton1}>
+                                <BackArrow></BackArrow>
+                    </View>
+                </TouchableOpacity>
+             </View>
+             <View style={{ height: hp("3.44%")}} />
+             <View style={{height: hp("6.14%"),alignItems:'center'}} >
                 <Text style={styles.titleText}>
                     How much time 
                 </Text>
             </View>
-            <View style={{height: hp("4.58%"),alignItems:'center'}} >
+            <View style={{height: hp("6.14%"),alignItems:'center'}} >
                 <Text style={styles.titleText}>
                     do you have ?
                 </Text>
             </View>
-            <View style={{ height: hp("25%")}} />
+            <View style={{ height: hp("18.89%")}} />
             <View style={{flex: 1}} >
                 <FlatList keyExtractor={(item,index) => item.id} data={ meditationCategories } renderItem= {renderGridItems} numColumns={3}/>            
             </View>
@@ -53,12 +66,20 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        backgroundColor: 'white'
     },
+    circleButton1:{
+        flex:1,
+        height: hp('5.55%'),
+        width: hp('5.55%'),  //The Width must be the same as the height
+        borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height 
+        backgroundColor: '#D3D3D3'
+      },
     gridItems: {
         flex: 1,
         margin: wp('3.65%'),
-        height: hp("11.46%"),
+        height: hp("13.64%"),
         overflow: 'hidden'
     },
     container: {
@@ -92,21 +113,21 @@ const styles = StyleSheet.create({
     },
     durationText: {
         height: hp("2.97%"),
-        fontFamily: 'raleway-regular',
+        fontFamily: 'raleway-bold',
         fontStyle: 'normal',
-        fontWeight: 'bold',
-        fontSize: wp('3.89%'),
-        lineHeight: hp("2.17%"),
+        fontWeight: '700',
+        fontSize: 16,
+        lineHeight: 19,
         color: "#7B7B7B",
         textAlign: 'center',
         justifyContent: 'center',
-        marginTop: hp("4.01%")
+        marginTop: hp("5.4%")
     },
     circleButton:{
         flex:1,
-        height: wp('24%'),
-        width: wp('24%'),  //The Width must be the same as the height
-        borderRadius: wp('48%'), //Then Make the Border Radius twice the size of width or Height   
+        height: hp('13.64%'),
+        width: hp('13.64%'),  //The Width must be the same as the height
+        borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height   
         borderWidth: 1,
         borderColor: '#555555'
       }

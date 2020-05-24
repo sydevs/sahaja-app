@@ -101,4 +101,4 @@ const bottomTabNavigator = createBottomTabNavigator({
   }
 });
 
-export default createAppContainer(bottomTabNavigator);
+export default createAppContainer(AppNavigator);
