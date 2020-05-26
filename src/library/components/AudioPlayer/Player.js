@@ -51,18 +51,6 @@ class Player extends Component {
     const { isPlaying, volume } = this.state;
     console.log('isPlaying: ', isPlaying);
 
-    // const initialStatus = {
-    //   // shouldPlay: playing,
-    //   shouldPlay: true,
-    //   // rate: this.state.rate,
-    //   // shouldCorrectPitch: this.state.shouldCorrectPitch,
-    //   volume: this.state.volume,
-    //   // isMuted: this.state.muted,
-    //   // isLooping: this.state.loopingType === LOOPING_TYPE_ONE
-    //   // // UNCOMMENT THIS TO TEST THE OLD androidImplementation:
-    //   // androidImplementation: 'MediaPlayer',
-    // };
-
     const initialStatus = {
       shouldPlay: isPlaying,
       volume
@@ -72,11 +60,7 @@ class Player extends Component {
     try {
       console.log('about to create sound');
       console.log('source: ', source);
-      // const { sound, status } = await Audio.Sound.createAsync(
-      //   source,
-      //   initialStatus,
-      //   this.onPlaybackStatusUpdate
-      // );
+ 
       const soundObject = new Audio.Sound();
       soundObject.setOnPlaybackStatusUpdate(this.onPlaybackStatusUpdate);
       console.log('about to load async');
@@ -97,7 +81,6 @@ class Player extends Component {
     console.log('out of load catch')
 
     // this._updateScreenForLoading(false);
-
   }
 
   _updateScreenForLoading(isLoading) {
@@ -119,9 +102,6 @@ class Player extends Component {
   }
 
   onPlaybackStatusUpdate = status => {
-    console.log('status updated');
-    console.log(status);
-    console.log('instance: ', this.playbackInstance);
     if (status.isLoaded) {
       this.setState({
         playbackInstancePosition: status.positionMillis,
@@ -132,9 +112,10 @@ class Player extends Component {
         volume: status.volume,
         shouldCorrectPitch: status.shouldCorrectPitch
       });
-      if (status.didJustFinish && !status.isLooping) {
+      if (status.didJustFinish && !status.isLooping) 
+      {
         this._advanceIndex(true);
-        this._updatePlaybackInstanceForIndex(true);
+        // this._updatePlaybackInstanceForIndex(true);
       }
     } else {
       if (status.error) {
@@ -158,10 +139,10 @@ class Player extends Component {
     console.log(`ON ERROR : ${error}`);
   };
 
-  // _advanceIndex(forward) {
-  //   this.index =
-  //     (this.index + (forward ? 1 : PLAYLIST.length - 1)) % PLAYLIST.length;
-  // }
+  _advanceIndex(forward) {
+    this.props.currentIndex = (this.props.currentIndex + (forward ? 1 : this.props.tracks.length - 1)) % this.props.tracks.length;
+    this.loadNewPlaybackInstance(true);
+  }
 
   // async _updatePlaybackInstanceForIndex(playing) {
   //   this._updateScreenForLoading(true);
@@ -189,7 +170,6 @@ class Player extends Component {
           shouldPlay: isPlaying,
           volume
         }
-
         const source = { uri: this.props.tracks[currentIndex].audioUrl }
         this.playbackInstance.loadAsync(source, initialStatus, false)
       }
@@ -248,7 +228,8 @@ class Player extends Component {
     const currentIndex = this.props.currentIndex
     const previousIndex = prevProps.currentIndex
 
-    if (currentIndex !== previousIndex && this.playbackInstance) {
+    if (currentIndex !== previousIndex && this.playbackInstance) 
+    {
       await this.playbackInstance.unloadAsync();
       this.loadNewPlaybackInstance(false);
     } else if (this.playbackInstance === null) {
