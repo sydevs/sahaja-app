@@ -71,8 +71,8 @@ const styles = StyleSheet.create({
         alignItems: 'center'
       },
     video: {
-        width: width,
-        height: height
+        width: wp('100%'),
+        height: hp('100%')
     }
 });
 

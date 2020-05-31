@@ -30,7 +30,7 @@ const ChooseDuration  = props => {
     return (
          <View style={styles.screen}>
              <View style={{ height: hp("5.85%")}} />
-             <View style={{ height: hp("5.55%"),alignSelf:'flex-start',left: wp('2%')}} >
+             <View style={{ height: hp("5.55%"),alignSelf:'flex-start',left: wp('6.4%')}} >
                 <TouchableOpacity onPress={() => {
                     props.navigation.navigate({
                         routeName:  'Meditation'
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         height: hp('5.55%'),
         width: hp('5.55%'),  //The Width must be the same as the height
         borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height 
-        backgroundColor: '#D3D3D3'
+        backgroundColor: '#DCDCDC'
       },
     gridItems: {
         flex: 1,

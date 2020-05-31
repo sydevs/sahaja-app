@@ -80,22 +80,6 @@ const YourFirstMeditation = props => {
                     </View>
                 </View>
             </View>
-
-            {/* <View style={{height: hp("2.86%"), alignItems:'center'}} >
-                <Text style={styles.welcomeMessage}>
-                    2. It will only take 9 
-                </Text>
-            </View>
-            <View style={{height: hp("2.86%"), alignItems:'center'}} >
-                <Text style={styles.welcomeMessage}>
-                    minutes and will literally change your life
-                </Text>
-            </View>
-            <View style={{height: hp("2.86%"), alignItems:'center'}} >
-                <Text style={styles.welcomeMessage}>
-                    change your life
-                </Text>
-            </View> */}
             <View style={{height: hp("15.44%")}} />
             <View style={{height: hp("9.75%"), alignItems:'center'}} >
                 <TouchableOpacity style={{alignItems:'center'}}
@@ -189,18 +173,18 @@ const styles = StyleSheet.create({
         //top: 227
     },
     welcomeButtonText: {
-        width: wp("48.66%"), 
+        width: wp("41.66%"), 
         height: hp("2.17%"),
         fontFamily: "raleway-bold",
         fontStyle: "normal",
         fontWeight: "bold",
         fontSize: wp("3.86%"),
         lineHeight: hp("2.17%"),
-        textAlign: "center",
+        textAlign: "right",
         letterSpacing: 0.2,
         color: "#7B7B7B",
         borderColor: "#7B7B7B",
-        right: 0,
+        right: wp('3%'),
         marginRight: 0,
         paddingRight: 0
     },
@@ -209,7 +193,7 @@ const styles = StyleSheet.create({
         width: wp("57.42%"),
         height: hp("9.75%"),
         borderColor: '#979797',
-        justifyContent: 'center',
+        //justifyContent: 'center',
         flexDirection: 'row',
         alignItems: 'center'
         
