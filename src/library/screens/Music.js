@@ -116,7 +116,10 @@ const Music  = props => {
                     <View style={styles.gridItems}>
                         <TouchableOpacity onPress={() => {
                     props.navigation.navigate({
-                            routeName:  'MusicPlayer'
+                            routeName:  'MusicPlayer',
+                            params: {
+                                playlistId: itemData.item.id
+                            }
                         })
                     }}>
                         <View style={styles.meditationTypeImage}><SvgXml xml={itemData.item.imageData} width="100" height="100"/></View>
