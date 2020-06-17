@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StatusBar,
+  TouchableOpacity
 } from 'react-native';
 // import Header from './Header';
 import AlbumArt from './AlbumArt';
@@ -11,6 +12,9 @@ import SeekBar from './SeekBar';
 import Controls from './Controls';
 // import Video from 'react-native-video';
 import { Audio } from 'expo-av';
+import BackArrow from '../../../res/svgs/BackArrow'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 
 // Some coded adapted from https://github.com/expo/playlist-example/blob/master/App.js
 
@@ -364,7 +368,14 @@ Player.defaultProps = {
 const styles = {
   container: {
     flex: 1,
-    // backgroundColor: '#ffffff',
+    backgroundColor: 'white',
+  },
+  circleButton:{
+    flex:1,
+    height: hp('5.55%'),
+    width: hp('5.55%'),  //The Width must be the same as the height
+    borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height 
+    backgroundColor: '#DCDCDC'
   },
   audioElement: {
     height: 0,

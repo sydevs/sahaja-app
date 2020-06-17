@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 8,
+    backgroundColor: 'white'
   },
   playButton: {
     display: 'flex',

@@ -4,9 +4,12 @@ import { withNavigationFocus } from 'react-navigation';
 // import Player from './Player';
 import Player from './Player';
 import SongList from './SongList';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text,TouchableOpacity } from 'react-native';
 // import i18n from '../../Assets/I18n/i18n';
 // import { Actions } from 'react-native-router-flux';
+import BackArrow from '../../../res/svgs/BackArrow'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 
 function MusicPlayer( props ) {
   const SONGS = {
@@ -309,9 +312,10 @@ function MusicPlayer( props ) {
         "cover_art_url": "https://assets.wemeditate.co/uploads/instrument_filter/icon/1/sitar.svg",
         "songs": [5, 6, 7, 8, 9, 10, 11, 16, 26]
       },
-      "0": {
-        "title": "",
-        "songs": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      "4": {
+        "title": "Nature",
+        "cover_art_url": "https://assets.wemeditate.co/uploads/instrument_filter/icon/1/sitar.svg",
+        "songs": [0, 1, 2, 3]
       }
     }
   }
@@ -411,6 +415,19 @@ function MusicPlayer( props ) {
 
   return (
     <View style={styles.container}>
+      <View style={{ height: hp("5.85%")}} />
+      <View style={{ height: hp("5.55%"),alignSelf:'flex-start',left: wp('6.4%')}} >
+        <TouchableOpacity onPress={() => {
+            props.navigation.navigate({
+                routeName:  'Music'
+            })
+        }}>
+            <View style={styles.circleButton}>
+                        <BackArrow></BackArrow>
+            </View>
+        </TouchableOpacity>
+      </View>
+        
       <View style={styles.player} >
         <Player
         currentIndex={currentSong}
@@ -423,7 +440,7 @@ function MusicPlayer( props ) {
         screenFocused={props.isFocused}
         />
       </View>
-      <Text style={styles.playlistTitle}>{playlistTracks[playlistId].title}</Text>
+      <Text style={styles.playlistTitle}>PlayList: {playlistTracks[playlistId].title}</Text>
       <View style={styles.list}>
         <SongList tracks={playlistTracks[playlistId].tracks} selectSong={selectSong} />
       </View>
@@ -443,8 +460,15 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     // flex: 1,
     // marginTop: Constants.statusBarHeight,
-    // backgroundColor: 'red',
+    backgroundColor: 'white',
     color: 'black',
+  },
+  circleButton:{
+    flex:1,
+    height: hp('5.55%'),
+    width: hp('5.55%'),  //The Width must be the same as the height
+    borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height 
+    backgroundColor: '#DCDCDC'
   },
   player: {
     flex: 2,
@@ -453,7 +477,7 @@ const styles = StyleSheet.create({
   playlistTitle: {
     marginTop: 10,
     fontSize: 24,
-    fontFamily: "raleway-regular",
+    fontFamily: "raleway-bold",
     fontStyle: "normal",
     fontWeight: "normal",
     lineHeight: 31,
