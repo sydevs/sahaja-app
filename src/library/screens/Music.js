@@ -181,7 +181,8 @@ const Music  = props => {
 const styles = StyleSheet.create({
     screen : {
         flex: 1,
-        flexDirection: 'column'
+        flexDirection: 'column',
+        backgroundColor: 'white'
     },
     gridItems: {
         padding: 20,
