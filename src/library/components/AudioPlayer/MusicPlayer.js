@@ -295,6 +295,36 @@ function MusicPlayer( props ) {
       "url": "https://assets.wemeditate.co/uploads/track/10/Santoor_Kaushik_Ranjani.mp3",
       "cover_art_url": "https://assets.wemeditate.co/uploads/artist/image/7/Rishi_Nair_B_W.jpg",
       "duration": "19:46"
+    }, {
+      "index": 27,
+      "name": "Ocean Sound",
+      "artists": [{
+        "name": "We Meditate",
+        "url": ""
+      }],
+      "url": "https://we-meditate.s3-ap-southeast-2.amazonaws.com/ocean-sound.mp3",
+      "cover_art_url": "https://we-meditate.s3-ap-southeast-2.amazonaws.com/ocean-sound.jpg",
+      "duration": "2:06"
+    },{
+      "index": 28,
+      "name": "Rainfall",
+      "artists": [{
+        "name": "We Meditate",
+        "url": ""
+      }],
+      "url": "https://we-meditate.s3-ap-southeast-2.amazonaws.com/rainfall.mp3",
+      "cover_art_url": "https://we-meditate.s3-ap-southeast-2.amazonaws.com/rainfall.png",
+      "duration": "10:00"
+    },{
+      "index": 29,
+      "name": "Stream",
+      "artists": [{
+        "name": "We Meditate",
+        "url": ""
+      }],
+      "url": "https://we-meditate.s3-ap-southeast-2.amazonaws.com/stream.mp3",
+      "cover_art_url": "https://we-meditate.s3-ap-southeast-2.amazonaws.com/stream.png",
+      "duration": "10:01"
     }],
     "playlists": {
       "2": {
@@ -314,25 +344,12 @@ function MusicPlayer( props ) {
       },
       "4": {
         "title": "Nature",
-        "cover_art_url": "https://assets.wemeditate.co/uploads/instrument_filter/icon/1/sitar.svg",
-        "songs": [0, 1, 2, 3]
+        "cover_art_url": "https://we-meditate.s3-ap-southeast-2.amazonaws.com/nature.jpg",
+        "songs": [27,28,29]
       }
     }
   }
-  // const TRACKS = [
-  //   {
-  //     title: 'Raag Yaman',
-  //     subtitle: 'By Leo Vertunni',
-  //     albumArtUrl: "https://assets.wemeditate.co/uploads/artist/image/1/28da8663c3.jpg",
-  //     audioUrl: "https://assets.wemeditate.co/uploads/track/7/Surbahar__raag_Yaman_-_Leo_Vertunni.mp3"
-  //   },
-  //   {
-  //     title: 'Setar Dashti',
-  //     subtitle: 'By Nirmal Nair',
-  //     albumArtUrl: "https://assets.wemeditate.co/uploads/artist/image/2/Nirmal_Nair_B_W.jpg",
-  //     audioUrl: "https://assets.wemeditate.co/uploads/track/12/Setar_Dashti_.mp3"
-  //   }
-  // ];
+  
 
   const generatePlaylistTracks = (songs) => {
     let playlistTracks = songs.playlists;

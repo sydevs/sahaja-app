@@ -5,6 +5,7 @@ import R from '../../res/R';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import MeditateIcon from '../../res/svgs/Meditate'
 import MusicIcon from '../../res/svgs/Music'
+import HomePage from '../../res/svgs/HomePage';
 
 
 const { width, height } = Dimensions.get('window')
@@ -153,21 +154,21 @@ const Music  = props => {
                   <View style={styles.bottomTabColumn}>
                     <TouchableOpacity style={{alignItems:'center'}}
                       onPress={() => {
+                          console.log('going to choose home')
+                          props.navigation.navigate({ routeName:  'Home'}) 
+                      }}> 
+                        <HomePage></HomePage>
+                        <Text style={styles.labelStyle}>Home</Text>
+                    </TouchableOpacity>
+                  </View>
+                  <View style={styles.bottomTabColumn}>
+                    <TouchableOpacity style={{alignItems:'center'}}
+                      onPress={() => {
                           console.log('going to choose meditation')
                           props.navigation.navigate({ routeName:  'Meditation'}) 
                       }}> 
                         <MeditateIcon></MeditateIcon>
                         <Text style={styles.labelStyle}>Meditate</Text>
-                    </TouchableOpacity>
-                  </View>
-                  <View style={styles.bottomTabColumn}>
-                  <TouchableOpacity style={{alignItems:'center'}}
-                      onPress={() => {
-                          console.log('going to choose music')
-                          props.navigation.navigate({ routeName:  'Music'}) 
-                      }}> 
-                        <MusicIcon></MusicIcon>
-                        <Text style={styles.labelStyle}>Music</Text>
                     </TouchableOpacity>
                   </View>
               </View>
