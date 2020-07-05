@@ -10,6 +10,7 @@ import {
   Dimensions,
 } from 'react-native';
 
+
 const TrackDetails = ({
   title,
   subtitle

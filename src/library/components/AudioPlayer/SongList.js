@@ -1,6 +1,8 @@
 import React from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
+import SmallArrow from '../../../res/svgs/SmallArrow'
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
 function Item({title, subtitle, duration, index, selectSong}) {
@@ -9,11 +11,21 @@ function Item({title, subtitle, duration, index, selectSong}) {
       <TouchableOpacity onPress={() => {
         selectSong(index);
       }}>
-      <Text style={styles.title}>{title}</Text>
-      <View style={styles.detailPart}>
-        <Text style={styles.subtitle}>{subtitle}</Text>
-        <Text style={styles.duration}>{duration}</Text>
-      </View>
+        <View style={{flex:1,flexDirection:'row'}}>
+          <View style={{flexDirection:'column',justifyContent:'center'}}> 
+            <SmallArrow></SmallArrow>
+          </View>
+          <View style={{flexDirection:'column',left: wp('6%')}}> 
+            <View><Text style={styles.title}>{title}</Text></View>
+            <View style={styles.detailPart}>
+              <Text style={styles.subtitle}>{subtitle}</Text>
+            </View>
+          </View>
+          <View style={{flexDirection:'column',justifyContent:'center',left: wp('20%')}}> 
+            <Text style={styles.duration}>{duration}</Text>
+          </View>
+        </View>
+            
       </TouchableOpacity>
     </View>
   );
@@ -54,6 +66,7 @@ const styles = StyleSheet.create({
     fontStyle: "normal",
     fontWeight: "normal",
     lineHeight: 25,
+    //left: wp('10%'),
     color: "#5E6063"
   },
   detailPart: {
@@ -61,7 +74,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   subtitle: {
-    flex: 3,
+    //flex: 3,
     fontSize: 14,
     fontFamily: "raleway-regular",
     fontStyle: "normal",
@@ -71,7 +84,7 @@ const styles = StyleSheet.create({
     color: "#7B7B7B"
   },
   duration: {
-    flex: 1,
+    //flex: 1,
     fontSize: 14,
     fontFamily: "raleway-regular",
     fontStyle: "normal",

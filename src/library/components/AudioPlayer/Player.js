@@ -316,7 +316,7 @@ class Player extends Component {
       <View style={styles.container}>
         {/* <StatusBar hidden={true} /> */}
         {/* <Header message="Playing From Charts" /> */}
-        {this.props.displayArt ? <View style={styles.art}><AlbumArt url={track.albumArtUrl} /></View> : ''}
+        {/* {this.props.displayArt ? <View style={styles.art}><AlbumArt url={track.albumArtUrl} /></View> : ''} */}
         <View style={styles.details}>
           <TrackDetails title={this.state.playbackInstanceName} subtitle={track.subtitle} />
         </View>
@@ -391,7 +391,7 @@ const styles = {
     // backgroundColor: 'blue',
   },
   seekbar: {
-    flex: 1,
+    //flex: 1,
     marginTop: 0,
     // backgroundColor: 'red'
   },

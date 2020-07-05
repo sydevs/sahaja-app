@@ -5,7 +5,7 @@ import { MEDITATIONS } from '../../../data/meditationData'
 import { SvgXml } from "react-native-svg";
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import  {Analytics} from 'aws-amplify';
-import BackArrow from '../../res/svgs/BackArrow'
+import Back from '../../res/svgs/Back'
 
 const { width, height } = Dimensions.get('window')
 const Meditation  = props => {
@@ -46,7 +46,7 @@ const Meditation  = props => {
                     })
                 }}>
                     <View style={styles.circleButton}>
-                                <BackArrow></BackArrow>
+                                <Back></Back>
                     </View>
                 </TouchableOpacity>
              </View>
@@ -90,7 +90,10 @@ const styles = StyleSheet.create({
         height: hp('5.55%'),
         width: hp('5.55%'),  //The Width must be the same as the height
         borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height 
-        backgroundColor: '#DCDCDC'
+        backgroundColor: '#DCDCDC',
+        alignItems: "baseline",
+        justifyContent: 'center'
+        
       },
     gridItems: {
         padding: wp('4.86%'),

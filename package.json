@@ -10,7 +10,7 @@
     "fonts": "node scripts/fonts.js"
   },
   "dependencies": {
-    "@expo/vector-icons": "^10.0.6",
+    "@expo/vector-icons": "^10.0.0",
     "@react-native-community/masked-view": "0.1.6",
     "@react-native-community/netinfo": "5.8.1",
     "aws-amplify": "3.0.10",
@@ -24,6 +24,7 @@
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+    "react-native-elements": "2.0.4",
     "react-native-gesture-handler": "~1.3.0",
     "react-native-inviewport": "1.1.0",
     "react-native-material-design": "0.3.7",

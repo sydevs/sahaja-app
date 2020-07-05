@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import {View , Text, StyleSheet, SafeAreaView,Dimensions,TouchableOpacity} from 'react-native'
 import { Video } from 'expo-av';
-import CloseWindow from '../../../res/svgs/CloseWindow'
+import Back from '../../../res/svgs/Back'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'
 
 const { width, height } = Dimensions.get('window')
@@ -46,7 +46,7 @@ const VideoPlayer  = props => {
                         })
                     }}>
                       <View style={styles.circleButton}>
-                        <CloseWindow></CloseWindow>
+                        <Back></Back>
                       </View>
                 </TouchableOpacity>
         </SafeAreaView>
@@ -67,8 +67,8 @@ const styles = StyleSheet.create({
         width: hp('5.55%'),  //The Width must be the same as the height
         borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height 
         backgroundColor: '#D3D3D3',
-        alignContent: 'center',
-        alignItems: 'center'
+        alignItems: "baseline",
+        justifyContent: 'center'
       },
     video: {
         width: wp('100%'),

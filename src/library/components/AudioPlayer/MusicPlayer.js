@@ -7,7 +7,7 @@ import SongList from './SongList';
 import { View, StyleSheet, Text,TouchableOpacity } from 'react-native';
 // import i18n from '../../Assets/I18n/i18n';
 // import { Actions } from 'react-native-router-flux';
-import BackArrow from '../../../res/svgs/BackArrow'
+import Back from '../../../res/svgs/Back'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
@@ -440,7 +440,7 @@ function MusicPlayer( props ) {
             })
         }}>
             <View style={styles.circleButton}>
-                        <BackArrow></BackArrow>
+                        <Back></Back>
             </View>
         </TouchableOpacity>
       </View>
@@ -485,25 +485,29 @@ const styles = StyleSheet.create({
     height: hp('5.55%'),
     width: hp('5.55%'),  //The Width must be the same as the height
     borderRadius: hp('27.28%'), //Then Make the Border Radius twice the size of width or Height 
-    backgroundColor: '#DCDCDC'
+    backgroundColor: '#DCDCDC',
+    alignItems: "baseline",
+        justifyContent: 'center'
   },
   player: {
-    flex: 2,
-    alignSelf: 'stretch',
+    flex: 1,
+    alignSelf: 'stretch'
   },
   playlistTitle: {
-    marginTop: 10,
+    //marginTop: 10,
     fontSize: 24,
     fontFamily: "raleway-bold",
     fontStyle: "normal",
     fontWeight: "normal",
-    lineHeight: 31,
+    lineHeight: hp('4.64%'),
     letterSpacing: 0.45,
-    color: "#7B7B7B"
+    color: "#7B7B7B",
+    //backgroundColor: 'yellow'
   },
   list: {
     flex: 1,
     alignSelf: 'stretch',
+    //backgroundColor: 'red'
   }
 });
 
