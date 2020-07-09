@@ -154,7 +154,7 @@ const Music  = props => {
                   <View style={styles.bottomTabColumn}>
                     <TouchableOpacity style={{alignItems:'center'}}
                       onPress={() => {
-                          console.log('going to choose home')
+                          //console.log('going to choose home')
                           props.navigation.navigate({ routeName:  'Home'}) 
                       }}> 
                         <HomePage></HomePage>
@@ -164,7 +164,7 @@ const Music  = props => {
                   <View style={styles.bottomTabColumn}>
                     <TouchableOpacity style={{alignItems:'center'}}
                       onPress={() => {
-                          console.log('going to choose meditation')
+                          //console.log('going to choose meditation')
                           props.navigation.navigate({ routeName:  'Meditation'}) 
                       }}> 
                         <MeditateIcon></MeditateIcon>
@@ -227,12 +227,15 @@ const styles = StyleSheet.create({
         color: "#555555",
         justifyContent: "center",
         textAlign: "center"
-      },
-      meditationTypeImage: {
-        alignItems: "center",
-        marginBottom: hp('1.14s%')
-      },
-        bottomTab: {
+    },
+    meditationTypeImage: {
+    alignItems: "center",
+    marginBottom: hp('1.14s%')
+    },
+    bottomTab: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
         height: hp('11%'),
         bottom: 0,
         width: width,

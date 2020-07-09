@@ -30,7 +30,7 @@ const HomeScreen = props => {
               <View style={{height: hp('9.75%'), alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
-                      console.log('going to choose meditation')
+                      //console.log('going to choose meditation')
                       props.navigation.navigate({ routeName:  'Meditation'}) 
                   }}>  
                       <View style={styles.meditationButton}>
@@ -45,7 +45,7 @@ const HomeScreen = props => {
               <View style={{height: hp('7.5%'), alignItems:'center'}} >
                   <TouchableOpacity style={{alignItems:'center'}}
                   onPress={() => {
-                      console.log('going to FirstExperience')
+                      //console.log('going to FirstExperience')
                       props.navigation.navigate({ routeName:  'FirstExperience', tabBarVisible: false}) 
                   }}>  
                       <View style={styles.repeatMeditationButton}>
@@ -60,7 +60,7 @@ const HomeScreen = props => {
                   <View style={styles.bottomTabColumn}>
                     <TouchableOpacity style={{alignItems:'center'}}
                       onPress={() => {
-                          console.log('going to choose meditation')
+                          //console.log('going to choose meditation')
                           props.navigation.navigate({ routeName:  'Meditation'}) 
                       }}> 
                         <MeditateIcon></MeditateIcon>
@@ -70,7 +70,7 @@ const HomeScreen = props => {
                   <View style={styles.bottomTabColumn}>
                   <TouchableOpacity style={{alignItems:'center'}}
                       onPress={() => {
-                          console.log('going to choose music')
+                          //console.log('going to choose music')
                           props.navigation.navigate({ routeName:  'Music'}) 
                       }}> 
                         <MusicIcon></MusicIcon>
@@ -173,6 +173,9 @@ repeatMeditationButton: {
   alignItems: 'center'
 },
 bottomTab: {
+  position: 'absolute',
+  left: 0,
+  right: 0,
   height: hp('10.94%'),
   bottom: 0,
   width: width,
