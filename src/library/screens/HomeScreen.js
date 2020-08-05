@@ -156,7 +156,7 @@ meditationButton: {
     
 },
 repeatMeditationText: {
-  height:hp('2.4%'),
+  height:hp('3.4%'),
   fontFamily: 'raleway-regular',
   fontStyle:'normal',
   fontWeight:'normal',
@@ -164,13 +164,16 @@ repeatMeditationText: {
   lineHeight:hp('1.83%'),
   letterSpacing:0.96,
   color:"#707070",
-  textAlign: 'center'
+  textAlign: 'center',
+  paddingTop: hp('1%')
   
 },
 repeatMeditationButton: {
+  height:hp('3.8%'),
   borderBottomWidth: 1,
   borderBottomColor: '#E1DEDE',
-  alignItems: 'center'
+  alignItems: 'center',
+  top: hp('1%')
 },
 bottomTab: {
   position: 'absolute',

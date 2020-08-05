@@ -218,19 +218,18 @@ const styles = StyleSheet.create({
         color: "#7B7B7B"
     },
     meditationTypeText: {
-        height: hp('2.29%'),
+        height: hp('4.13%'),
         fontFamily: 'raleway-regular',
         fontStyle: "normal",
         fontWeight: 'normal',
         fontSize: wp('4.13%'),
-        lineHeight: hp('2.17%'),
         color: "#555555",
         justifyContent: "center",
-        textAlign: "center"
+        textAlign: "center",
+        paddingTop: hp('1%')
     },
     meditationTypeImage: {
-    alignItems: "center",
-    marginBottom: hp('1.14s%')
+        alignItems: "center"
     },
     bottomTab: {
         position: 'absolute',
@@ -245,20 +244,20 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         flex: 1,
         flexDirection: 'row'
-        },
-        bottomTabColumn: {
+    },
+    bottomTabColumn: {
         alignContent: 'center',
         flexDirection: 'column',
         width: wp('50%'),
         alignItems: 'center',
         top: hp('1.2%')
-        },
-        labelStyle: {
+    },
+    labelStyle: {
         fontSize: 15,
         fontFamily: 'raleway-regular',
         fontStyle: "normal",
         color: '#7B7B7B'
-        }
+    }
 });
 
 export default Music; 

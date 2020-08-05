@@ -12,7 +12,7 @@ const VideoPlayer  = props => {
     const _onPlaybackStatusUpdate = (playbackStatus) => {
         if (playbackStatus.didJustFinish){
           // The player has just finished playing and will stop.
-          console.log('video finished, going to meditation screen ...')
+          //console.log('video finished, going to meditation screen ...')
           props.navigation.navigate({ routeName:  'Meditation'}) 
         }
     };
@@ -35,6 +35,7 @@ const VideoPlayer  = props => {
                 rate={1.0}
                 volume={1.0}
                 isMuted={isMute}
+                playThroughEarpieceAndroid={false}
                 resizeMode="cover"
                 shouldPlay
                 useNativeControls
