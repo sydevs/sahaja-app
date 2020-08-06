@@ -35,7 +35,7 @@
     },
     "android": {
       "package": "co.wemeditate.sahajaapp",
-      "versionCode": 2
+      "versionCode": 3
     },
     "description": "Guided meditations for better life"
   }
