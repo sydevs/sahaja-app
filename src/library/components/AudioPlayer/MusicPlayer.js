@@ -402,7 +402,7 @@ function MusicPlayer( props ) {
 
   const selectSong = (index) => {
     // console.log('select song: ', index);
-    if (index !== currentSong && index > 0 && index < playlistTracks[playlistId].tracks.length - 1) {
+    if (index !== currentSong && index > 0 && index <= playlistTracks[playlistId].tracks.length - 1) {
       setCurrentSong(index); 
     }
   }

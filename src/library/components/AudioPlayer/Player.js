@@ -42,6 +42,7 @@ class Player extends Component {
       isBuffering: false,
       isLoading: true,
       shouldCorrectPitch: true,
+      playThroughEarpieceAndroid: false,
       rate: 1.0,
     };
   }
