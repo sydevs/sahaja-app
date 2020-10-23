@@ -27,7 +27,6 @@ class Player extends Component {
     super(props);
     this.playbackInstance = null;
     this.state = {
-      shouldPlay: false,
       isPlaying: false,
       previouslyPlay: false,
       volume: 1.0,
